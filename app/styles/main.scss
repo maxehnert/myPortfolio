@@ -1,0 +1,283 @@
+ // Bourbon & Neat
+@import '../../bower_components/bourbon/dist/bourbon';
+@import '../../bower_components/neat/app/assets/stylesheets/neat';
+@import '../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
+
+
+// Custom Styles
+body, html, main{
+  height: 100%;
+}
+body {
+  background: #fafafa;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  position: relative;
+
+}
+.cd-fixed-bg {
+	min-height: 100%;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.cd-fixed-bg-end {
+  min-height: 50%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.cd-scrolling-bg {
+	min-height: 100%;
+}
+.cd-scrolling-bg-end {
+  min-height: 60%;
+}
+.cd-fixed-bg.cd-bg-1 {
+  background-image: url("../images/IMG_3527.JPG");
+}
+.cd-fixed-bg-end.cd-bg-3 {
+  background-image: url("../images/road.jpg");
+}
+.cd-color-1{
+  background-color: HSLA(200, 69%, 54%, 1);
+}
+.cd-color-21{
+  background-color: red;
+}
+.cd-color-3{
+  background-color: black;
+}
+.cd-color-4{
+  background-color: grey;
+}
+
+
+h2 span{
+  border-bottom: 2px solid white;
+}
+
+.jumbotron{
+
+  padding: 180px 0 80px;
+  margin-bottom: 0px;
+}
+
+.about{
+text-align: center;
+color: black;
+padding: 180px 0 80px;
+}
+
+.container{
+  position: relative;
+}
+
+.section-heading h2{
+  font-size: 48px;
+font-weight: 600;
+letter-spacing: 0.05em;
+font-family: 'Roboto Slab', serif;
+}
+
+.section-heading p, .section-content p{
+  font-size: 21px;
+line-height: 28px;
+font-weight: 300;
+font-family: 'Titillium Web', sans-serif;
+margin: 0 80px 10px;
+}
+
+    /* CHART */
+/* @media screen and (max-width: 990px) {
+.cd-color-2 {
+
+}
+}
+.chart-container {
+width: 80%;
+  margin: 0 auto;
+}
+
+.circle-graph span {
+  text-align: center;
+  padding: 30px;
+  margin-bottom:-113px;
+  z-index: 100;
+  color: white;
+
+}
+.graph-one {
+  height: 400px; set height for postioning
+}
+.graph-title{
+  color:black;
+  text-align: center;
+  padding: 50px;
+  margin: 0;
+}
+.circle-graph-container-1 {
+  position: relative;
+}
+
+.circle-graph {
+  margin: 20px;
+    float: left;
+}
+
+.skill-name{
+  text-align: center;
+}
+ */
+/* END CHARTS */
+
+.my-work, .contact-head{
+  font-family: 'Roboto Slab', serif;
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+.my-work{
+  padding-top: 10%;
+  margin-bottom: 5%;
+  margin-top: 0;
+}
+
+
+/* MY PROJECT */
+.view {
+    width: 273px;
+    height: 200px;
+    margin: 10px;
+    float: left;
+    border: 10px solid #fff;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px #e6e6e6;
+    cursor: default;
+    background: #fff
+}
+.view .mask, .view .content {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0
+}
+.view img {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+.view h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 20px 0 0 0
+}
+.view p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 12px;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px 20px;
+    text-align: center
+}
+.view a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000
+}
+.view a.info:hover {
+    box-shadow: 0 0 5px #000
+}
+
+/* FOR THE first EXAMPLE */
+
+.view-first img {
+    transition: all 0.2s linear;
+}
+.view-first .mask {
+    opacity: 0;
+    background-color: HSLA(0, 0%, 74%, .7);
+    transition: all 0.4s ease-in-out;
+}
+.view-first h2 {
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+.view-first p {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+.view-first a.info{
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.view-first:hover img {
+    transform: scale(1.1);
+}
+.view-first:hover .mask {
+    opacity: 1;
+}
+.view-first:hover h2,
+.view-first:hover p,
+.view-first:hover a.info {
+    opacity: 1;
+    transform: translateY(0px);
+}
+.view-first:hover p {
+    transition-delay: 0.1s;
+}
+.view-first:hover a.info {
+    transition-delay: 0.2s;
+}
+
+/* CONTACT ME SECTION */
+.contact-head{
+  padding-top: 40px;
+}
+
+.hero-heading span{
+  text-decoration: 2px solid white;
+}
+
+
+.navbar {
+   background-color:HSLA(0, 0%, 74%, 1);
+   background: HSLA(0, 0%, 74%, 1);
+   border-color: HSLA(0, 0%, 74%, 1);
+}
+
+.img-skill{
+  height: 100px;
+  width: 50px;
+}
+
+.col-md-4 img{
+  height: 50px;
+}
+
+.cd-color-21 .row{
+  background-color: red;
+  .img-skill{
+    border-radius: 50%;
+  }
+}
