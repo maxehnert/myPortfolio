@@ -1,11 +1,9 @@
- // Bourbon & Neat
-@import '../../bower_components/bourbon/dist/bourbon';
-@import '../../bower_components/neat/app/assets/stylesheets/neat';
+
 @import '../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
 
 
 // Custom Styles
-body, html, main{
+body, html, main {
   height: 100%;
 }
 body {
@@ -44,240 +42,238 @@ body {
 .cd-fixed-bg-end.cd-bg-3 {
   background-image: url("../images/road.jpg");
 }
-.cd-color-1{
+.cd-color-1 {
   background-color: HSLA(200, 69%, 54%, 1);
 }
-.cd-color-2{
+.cd-color-2 {
   background-color: HSLA(300, 1%, 37%, 1);
 }
-.cd-color-3{
+.cd-color-3 {
   background-color: black;
 }
-.cd-color-4{
+.cd-color-4 {
   background-color: grey;
 }
 
 /* END Background Images and Colors */
 
-
-.navbar-brand{
+.navbar-brand {
   font-family: 'Roboto Slab', serif;
   font-size: 25px;
-
 }
 
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover,.nav-pills > li > a:hover {
-text-decoration: none;
-font-weight: bold;
-border-radius:0px;
-border-bottom-width: 4px;
-border-bottom-style: solid;
-border-bottom-color: HSLA(200, 69%, 54%, 1);
-    color: white !important;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 0px;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  border-bottom-color: HSLA(200, 69%, 54%, 1);
+  color: white !important;
   background-color: transparent !important;
 }
-.nav-pills > li > a{
-    border-radius:0px;
-}
-
-
-/* Underlines my name */
-h2 span{
-  border-bottom: 2px solid white;
+.nav-pills > li > a {
+  border-radius:0px;
 }
 
 /* Home Section */
 
-.jumbotron{
+/* Underlines my name */
+h2 span {
+  border-bottom: 2px solid white;
+}
+
+.jumbotron {
   padding: 180px 0 80px;
   margin-bottom: 0px;
 }
-.container{
+.container {
   position: relative;
 }
 /* About Me Section */
 
-.about{
-text-align: center;
-color: black;
-padding-top: 10%;
-margin-bottom: 0%;
-margin-top: 0;
+.about {
+  text-align: center;
+  color: black;
+  padding-top: 10%;
+  margin-bottom: 0%;
+  margin-top: 0;
 }
 
-.section-heading h2{
+.section-heading h2 {
   font-size: 48px;
-font-weight: 600;
-letter-spacing: 0.05em;
-font-family: 'Roboto Slab', serif;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  font-family: 'Roboto Slab', serif;
 }
 
-.section-heading p, .section-content p{
+.section-heading p, .section-content p {
   font-size: 21px;
-line-height: 28px;
-font-weight: 300;
-font-family: 'Titillium Web', sans-serif;
-margin: 0 80px 10px;
+  line-height: 28px;
+  font-weight: 300;
+  font-family: 'Titillium Web', sans-serif;
+  margin: 0 80px 10px;
 }
 
-@media (max-width: 768px){
-  .section-content{
+/* Change text to left align when on tablet or phone */
+@media (max-width: 768px) {
+  .section-content {
     text-align: left;
   }
-   .section-heading p, .section-content p {
+   .section-heading p, .section-content p{
     margin: 0 10px 10px;
   }
 }
 
 /* My Skills Section */
 
-.my-skills, .my-work, .contact-head{
+.my-skills, .my-work, .contact-head {
   font-family: 'Roboto Slab', serif;
   font-size: 48px;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-align: center;
 }
-.my-skills, .my-work{
+.my-skills, .my-work {
   padding-top: 10%;
   margin-bottom: 5%;
   margin-top: 0;
 }
 
-.c-img{
+.c-img {
   text-align: center;
   border-bottom: 2px solid white;
   margin: 5px;
 
-  .img-skill{
+  .img-skill {
     height: 100px;
     width: 100px;
     padding: 5px;
   }
-  .node-img{
+  .node-img {
     width: 250px;
   }
 }
 
-.skills-p{
+.skills-p {
   padding: 5px;
   text-align: center;
 }
 
 /* MY PROJECTS Section */
 
-.img-responsive{
+.img-responsive {
   width: 100% \9;
 
 }
 .view {
-    border: 2px solid white;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    box-shadow: 1px 1px 2px #e6e6e6;
-    cursor: default;
-    background: white
+  border: 2px solid white;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  box-shadow: 1px 1px 2px #e6e6e6;
+  cursor: default;
+  background: white
 }
 .view .mask, .view .content {
   width: 100%;
   height: 100%;
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    left: 0;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
 
 }
 .view img {
-    display: block;
-    position: relative;
-    width: 100%;
+  display: block;
+  position: relative;
+  width: 100%;
 }
 .view h2 {
-    text-transform: uppercase;
-    color: #fff;
-    text-align: center;
-    position: relative;
-    font-size: 17px;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.8);
-    margin: 20px 0 0 0
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  margin: 20px 0 0 0;
 }
 .view p {
-    font-family: 'Titillium Web', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    position: relative;
-    color: black;
-    padding: 10px 20px 20px;
-    text-align: center
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+  color: black;
+  padding: 10px 20px 20px;
+  text-align: center
 }
 .view a.info {
-    display: inline-block;
-    text-decoration: none;
-    padding: 7px 14px;
-    background: #000;
-    color: #fff;
-    text-transform: uppercase;
-    box-shadow: 0 0 1px #000
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  box-shadow: 0 0 1px #000
 
 }
 .view a.info:hover {
-    box-shadow: 0 0 5px #000
+  box-shadow: 0 0 5px #000
 }
 
 .view-first img {
-    transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .view-first .mask {
-    opacity: 0;
-    background-color: HSLA(0, 0%, 74%, .7);
-    transition: all 0.4s ease-in-out;
+  opacity: 0;
+  background-color: HSLA(0, 0%, 74%, .7);
+  transition: all 0.4s ease-in-out;
 }
 .view-first h2 {
-    transform: translateY(-100px);
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
 }
 .view-first p {
-    transform: translateY(100px);
-    opacity: 0;
-    transition: all 0.2s linear;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.2s linear;
 }
-.view-first a.info{
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
+.view-first a.info {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
 }
 
 .view-first:hover img {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 .view-first:hover .mask {
-    opacity: 1;
+  opacity: 1;
 }
 .view-first:hover h2,
 .view-first:hover p,
 .view-first:hover a.info {
-    opacity: 1;
-    transform: translateY(0px);
+  opacity: 1;
+  transform: translateY(0px);
 }
 .view-first:hover p {
-    transition-delay: 0.1s;
+  transition-delay: 0.1s;
 }
 .view-first:hover a.info {
-    transition-delay: 0.2s;
+  transition-delay: 0.2s;
 }
 
-.aaa{
+.low-col-adjust {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 /* CONTACT ME SECTION */
-.contact-head{
+.contact-head {
   padding-top: 40px;
 }
 
-.hero-heading span{
+.hero-heading span {
   text-decoration: 2px solid white;
 }
