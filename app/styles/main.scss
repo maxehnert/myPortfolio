@@ -59,11 +59,28 @@ body {
 
 /* END Background Images and Colors */
 
-.navbar {
-   background-color:HSLA(0, 0%, 74%, 1);
-   background: HSLA(0, 0%, 74%, 1);
-   border-color: HSLA(0, 0%, 74%, 1);
+
+.navbar-brand{
+  font-family: 'Roboto Slab', serif;
+  font-size: 25px;
+
 }
+
+.nav-pills > .active > a,
+.nav-pills > .active > a:hover,.nav-pills > li > a:hover {
+text-decoration: none;
+font-weight: bold;
+border-radius:0px;
+border-bottom-width: 4px;
+border-bottom-style: solid;
+border-bottom-color: HSLA(200, 69%, 54%, 1);
+    color: white !important;
+  background-color: transparent !important;
+}
+.nav-pills > li > a{
+    border-radius:0px;
+}
+
 
 /* Underlines my name */
 h2 span{
