@@ -101,7 +101,9 @@ h2 span{
 .about{
 text-align: center;
 color: black;
-padding: 180px 0 80px;
+padding-top: 10%;
+margin-bottom: 0%;
+margin-top: 0;
 }
 
 .section-heading h2{
@@ -117,6 +119,15 @@ line-height: 28px;
 font-weight: 300;
 font-family: 'Titillium Web', sans-serif;
 margin: 0 80px 10px;
+}
+
+@media (max-width: 768px){
+  .section-content{
+    text-align: left;
+  }
+   .section-heading p, .section-content p {
+    margin: 0 10px 10px;
+  }
 }
 
 /* My Skills Section */
