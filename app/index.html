@@ -17,6 +17,7 @@
     <!-- endbuild -->
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab|Titillium+Web:400,300' rel='stylesheet' type='text/css'>
     <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/animate.css">
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
@@ -35,7 +36,6 @@
       ga('send', 'pageview');
 
     </script>
-
   </head>
   <body id='top' data-spy="scroll" data-target=".navbar-fixed-top">
     <!-- Hello curious viewer! Welcome to my portfolio website. I hope you enjoy browsing.
@@ -62,7 +62,7 @@
       <ul class="nav navbar-nav navbar-right nav-pills nav-stacked">
         <li><a href="#home" class='scrollto'>Home</a></li>
         <li><a href="#about" class='scrollto'>About Me</a></li>
-        <li><a href="#skills" class='scrollto'>Skills</a></li>
+        <li><a href="#skills" class='scrollto skillcheck'>Skills</a></li>
         <li><a href="#work" class='scrollto'>Work</a></li>
         <li><a href="#contact" class='scrollto'>Contact Me</a></li>
       </ul>
@@ -135,22 +135,22 @@
   <div class="row">
     <div class="col-md-4">
       <div class="c-img">
-        <img src="images/html5.png" class="img-skill">
-        <img src="images/js.png" class="img-skill">
-        <img src="images/jquery.png" class="img-skill">
+        <img src="images/html5.png" class="img-skill imgleft imgnone">
+        <img src="images/js.png" class="img-skill imgleft imgnone">
+        <img src="images/jquery.png" class="img-skill imgleft imgnone">
       </div>
       <p class='skills-p'>I am an expert of HTML5 and CSS3 best practices. I am very experienced writing javascript as-well-as libraries such as jQuery and Underscore. This can be seen in all of my featured applications below.</p>
     </div>
     <div class="col-md-4">
       <div class="c-img">
-        <img src="images/angular.png" class="img-skill">
-        <img src="images/backbone.png" class="img-skill">
+        <img src="images/angular.png" class="img-skill imgcenter imgnone">
+        <img src="images/backbone.png" class="img-skill imgcenter imgnone">
       </div>
       <p class='skills-p'>Angular is my go-to MVC of choice. I also have experience using Backbone and have several examples below utilizing both MVC frameworks. I am comfortable writing full scale applications in either frameworks.</p>
     </div>
     <div class="col-md-4">
       <div class="c-img">
-        <img src="images/node.png" class="img-skill node-img">
+        <img src="images/node.png" class="img-skill node-img imgright imgnone">
       </div>
       <p class='skills-p'>I am currently building and experimenting using Nodejs with an expectation that I will be able to handle both client-side and now server-side applications. I am experienced in building full crud applications using RESTful APIs as-well-as creating my own APIs.</p>
     </div>
@@ -261,6 +261,7 @@
     <script src="../bower_components/underscore/underscore.js"></script>
     <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
     <script src="../bower_components/looper/src/looper.js"></script>
+    <script src="../bower_components/waypoints/lib/jquery.waypoints.js"></script>
 
     <!-- endbower -->
     <!-- endbuild -->

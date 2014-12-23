@@ -143,13 +143,16 @@ h2 span {
 
 .c-img {
   text-align: center;
-  border-bottom: 2px solid white;
+  border-bottom: 4px solid HSLA(200,69%,54%,1);
   margin: 5px;
 
   .img-skill {
     height: 100px;
     width: 100px;
     padding: 5px;
+  }
+  .imgnone{
+    opacity: 0;
   }
   .node-img {
     width: 250px;
