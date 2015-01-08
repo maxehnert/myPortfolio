@@ -145,6 +145,7 @@ h2 span {
   text-align: center;
   border-bottom: 4px solid HSLA(200,69%,54%,1);
   margin: 5px;
+  padding-bottom: 10px;
 
   .img-skill {
     height: 100px;
@@ -155,7 +156,7 @@ h2 span {
     opacity: 0;
   }
   .node-img {
-    width: 250px;
+    width: 275px;
   }
 }
 
@@ -231,7 +232,7 @@ h2 span {
 }
 .view-first .mask {
   opacity: 0;
-  background-color: HSLA(0, 0%, 74%, .7);
+  background-color: HSLA(0, 0%, 74%, .9);
   transition: all 0.4s ease-in-out;
 }
 .view-first h2 {
