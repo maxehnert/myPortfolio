@@ -24,7 +24,7 @@ body {
 	background-position: center center;
 }
 .cd-fixed-bg-end {
-  min-height: 50%;
+  min-height: 100%;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -274,9 +274,28 @@ h2 span {
 }
 /* CONTACT ME SECTION */
 .contact-head {
-  padding-top: 40px;
+  padding-top: 20%;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.heading-contact {
+  color: black;
+}
+
+.my-name {
+  border-bottom: 2px solid black;
 }
 
 .hero-heading span {
   text-decoration: 2px solid white;
+}
+
+.contact-container{
+  text-align: center;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
 }
