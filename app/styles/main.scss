@@ -94,17 +94,20 @@ body {
 
 /* About Section */
 .cd-color-1 {
-  background-color: HSLA(0, 0%, 93%, 1);
+/*  background-color: HSLA(0, 0%, 93%, 1);*/
+background-color: #0A516D;
 }
 
 /* Skills Section */
 .cd-color-2 {
-  background-color: HSLA(300, 1%, 37%, 1);
+/*  background-color: HSLA(300, 1%, 37%, 1);*/
+background-color: #7DAD93;
 }
 
 /* Work Section */
 .cd-color-3 {
-  background-color: HSLA(0, 0%, 16%, 1);
+/*  background-color: HSLA(0, 0%, 16%, 1);*/
+  background-color: #018790;
 }
 
 /* END Background Images and Colors */
@@ -114,7 +117,8 @@ body {
 .navigation {
   list-style: none;
   margin: 0;
-  background: black;
+  /*background: black;*/
+  background-color: rgba(72, 72, 72, 0.95);
   display: flex;
   -webkit-flex-flow: row wrap;
   position: fixed;
@@ -251,7 +255,8 @@ h2 span {
 
 /* About Me Section */
 .about-me {
-  color: black;
+/*  color: black;*/
+  color: #BACCA4;
   padding-top: 5%;
 }
 
@@ -270,13 +275,24 @@ h2 span {
 }
 
 .section-content p {
-  color: black;
+/*  color: black; */
+  color: #BACCA4;
   font-family: 'Titillium Web', sans-serif;
   font-size: 21px;
   font-weight: 300;
   line-height: 28px;
   margin: 0 0px 10px;
   text-align: left;
+}
+
+.section-content a {
+  color: #2B2726;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.section-content a::after {
+  color: #2B2726;
 }
 
 .github-user {
@@ -313,6 +329,10 @@ h2 span {
 }
 
 /* My Skills Section */
+
+.my-skills {
+  color: #2B2726;
+}
 
 .new-skills {
   display: flex;
@@ -455,13 +475,15 @@ z-index: 2;
   width: 60%;
 
   h2 {
+    color: #2B2726;
     margin-top: 10px;
   }
 
   p,
   a,
   span {
-    color: HSLA(0, 0%, 93%, 1);
+    /*color: HSLA(0, 0%, 93%, 1);*/
+    color: #BACCA4;
     font-family: 'Titillium Web', sans-serif;
     font-size: 21px;
     font-weight: 300;
@@ -473,7 +495,13 @@ z-index: 2;
   }
 
   a:hover {
-    color: HSLA(200, 69%, 54%, 1);
+    /*color: HSLA(200, 69%, 54%, 1);*/
+    color: #2B2726;
+    text-decoration: none;
+  }
+
+  a::after {
+    color: #2B2726;
     text-decoration: none;
   }
 }
