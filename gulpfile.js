@@ -8,9 +8,11 @@ var rimraf = require('rimraf');
 var exec = require('child_process').exec;
 var prompt = require('gulp-prompt');
 var uglify = require('gulp-uglify');
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
 
 gulp.task('compress', function() {
-  return gulp.src('lib/*.js')
+  return gulp.src('app/scripts/*.js')
     .pipe(uglify())
     .pipe(gulp.dest('dist'));
 });
@@ -37,13 +39,23 @@ gulp.task('html', ['styles'], function () {
 });
 
 gulp.task('images', function () {
-  return gulp.src('app/images/**/*')
-    .pipe($.cache($.imagemin({
-      progressive: true,
-      interlaced: true
-    })))
-    .pipe(gulp.dest('dist/images'));
+    return gulp.src('app/images/**/*')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest('dist/images'));
 });
+
+// gulp.task('images', function () {
+//   return gulp.src('app/images/**/*')
+//     .pipe($.cache($.imagemin({
+//       progressive: true,
+//       interlaced: true
+//     })))
+//     .pipe(gulp.dest('dist/images'));
+// });
 
 gulp.task('fonts', function () {
   return gulp.src('app/fonts/**/*')

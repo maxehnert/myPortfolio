@@ -15,3 +15,11 @@ $('.cd-color-2').waypoint(function(direction) {
 }, {
   offset: '50%'
 });
+
+
+/* Github Profile Activity Widget*/
+Github.userActivity({
+  username: "maxehnert",
+  selector: ".github-user",
+  limit: 20
+});
