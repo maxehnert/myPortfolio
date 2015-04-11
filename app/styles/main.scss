@@ -3,136 +3,67 @@
 
 
 // Custom Styles
-body, html, main {
+body,
+html,
+main {
   height: 100%;
 }
+
 body {
   background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   position: relative;
-
 }
 
 /* Background Images and Colors */
 
-.cd-fixed-bg {
-  min-height: 100%;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
+/* Set attributes for background images*/
+.cd-fixed-bg,
 .cd-fixed-bg-end {
-  min-height: 100%;
-  background-size: cover;
   background-attachment: fixed;
-  background-repeat: no-repeat;
   background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
 }
+
 .cd-scrolling-bg {
   min-height: 100%;
 }
+
 .cd-scrolling-bg-end {
   min-height: 60%;
 }
+
+/* Landing page background Image */
 .cd-fixed-bg.cd-bg-1 {
   background-image: url("../images/mountain.png");
 }
+
+/* Contact Section Background Image */
 .cd-fixed-bg-end.cd-bg-3 {
   background-image: url("../images/road.png");
 }
+
+/* About Section */
 .cd-color-1 {
   background-color: HSLA(0, 0%, 93%, 1);
 }
+
+/* Skills Section */
 .cd-color-2 {
   background-color: HSLA(300, 1%, 37%, 1);
 }
+
+/* Work Section */
 .cd-color-3 {
   background-color: black;
 }
-.cd-color-4 {
-  background-color: grey;
-}
 
-/* END Background Images and Colors */
+/* Change Formatting for Mobile Use */
 
-.navbar-brand {
-  font-family: 'Roboto Slab', serif;
-  font-size: 25px;
-}
-
-.nav-pills > .active > a,
-.nav-pills > .active > a:hover,.nav-pills > li > a:hover {
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 0px;
-  border-bottom-width: 4px;
-  border-bottom-style: solid;
-  border-bottom-color: HSLA(200, 69%, 54%, 1);
-  color: white !important;
-  background-color: transparent !important;
-}
-.nav-pills > li > a {
-  border-radius:0px;
-}
-
-/* Home Section */
-
-/* Underlines my name */
-h2 span {
-  border-bottom: 2px solid white;
-}
-
-.jumbotron {
-  padding: 180px 0 80px;
-  margin-bottom: 0px;
-}
-.container {
-  position: relative;
-}
-/* About Me Section */
-
-.about {
-  text-align: center;
-  color: black;
-  padding-top: 5%;
-  margin-bottom: 0%;
-  margin-top: 0;
-}
-
-.section-heading h2 {
-  text-align: center;
-  color: black;
-  padding-top: 10%;
-  margin-bottom: 0%;
-  margin-top: 0;
-  font-size: 48px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  font-family: 'Roboto Slab', serif;
-}
-
-.section-content p {
-  font-size: 21px;
-  line-height: 28px;
-  font-weight: 300;
-  font-family: 'Titillium Web', sans-serif;
-  margin: 0 0px 10px;
-  text-align: left;
-}
-
-.github-user {
-  color: black;
-  font-weight: 400;
-}
-
-/* Change text to left align when on tablet or phone */
 @media (max-width: 768px) {
-
-  .section-content {
-    text-align: left;
-  }
 
   .section-content p{
     margin: 0 10px 10px;
@@ -147,55 +78,140 @@ h2 span {
   }
 
   .close-statement p {
+    color: grey;
     font-family: 'Roboto Slab', serif;
     font-size: 28px;
-    font-weight: 800;
+    font-weight: 600;
     letter-spacing: 0.05em;
-    text-align: left;
-    color: grey;
     padding-top: 80px;
+    text-align: left;
   }
-
 }
+
+/* END Background Images and Colors */
+
+/* Navigation */
+
+.navbar-brand {
+  font-family: 'Roboto Slab', serif;
+  font-size: 25px;
+}
+
+.nav-pills > .active > a,
+.nav-pills > .active > a:hover,
+.nav-pills > li > a:hover {
+  background-color: transparent !important;
+  border-bottom-color: HSLA(200, 69%, 54%, 1);
+  border-bottom-style: solid;
+  border-bottom-width: 4px;
+  border-radius: 0px;
+  color: white !important;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-pills > li > a {
+  border-radius:0px;
+}
+
+/* Home Section */
+
+/* Underlines my name */
+h2 span {
+  border-bottom: 2px solid white;
+}
+
+.jumbotron {
+  margin-bottom: 0px;
+  padding: 180px 0 80px;
+}
+.container {
+  position: relative;
+}
+
+/* About Me Section */
+
+.about {
+  color: black;
+  margin-bottom: 0%;
+  margin-top: 0;
+  padding-top: 5%;
+  text-align: center;
+}
+
+.section-heading h2 {
+  color: black;
+  font-family: 'Roboto Slab', serif;
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 0%;
+  margin-top: 0;
+  padding-top: 10%;
+  text-align: center;
+}
+
+.section-content p {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 28px;
+  margin: 0 0px 10px;
+  text-align: left;
+}
+
+.github-user {
+  color: black;
+  font-weight: 400;
+  margin: 0 0px 10px;
+}
+
+
 
 /* My Skills Section */
 
-.my-skills, .my-work, .contact-head {
+.my-skills,
+.my-work,
+.contact-head {
   font-family: 'Roboto Slab', serif;
   font-size: 48px;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-align: center;
 }
-.my-skills, .my-work {
-  padding-top: 10%;
+
+.my-skills,
+.my-work {
   margin-bottom: 5%;
   margin-top: 0;
+  padding-top: 10%;
 }
 
 .c-img {
-  text-align: center;
   border-bottom: 4px solid HSLA(200,69%,54%,1);
   margin: 5px;
   padding-bottom: 10px;
+  text-align: center;
 
   .img-skill {
     height: 100px;
-    width: 100px;
     padding: 5px;
+    width: 100px;
   }
+
   .imgnone{
     opacity: 0;
   }
+
   .node-img {
     width: 275px;
   }
 }
 
 .skills-p {
+  font-size: 20px;
   padding: 5px;
   text-align: center;
-  font-size: 20px;
 }
 
 /* MY PROJECTS Section */
@@ -204,80 +220,89 @@ h2 span {
   width: 100% \9;
 
 }
+
 .view {
+  background: white;
   border: 2px solid white;
+  box-shadow: 1px 1px 2px #e6e6e6;
+  cursor: default;
   overflow: hidden;
   position: relative;
   text-align: center;
-  box-shadow: 1px 1px 2px #e6e6e6;
-  cursor: default;
-  background: white
 }
+
 .view .mask, .view .content {
-  width: 100%;
   height: 100%;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
   left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
 
 }
+
 .view img {
   display: block;
   position: relative;
   width: 100%;
 }
+
 .view h2 {
-  text-transform: uppercase;
-  color: #fff;
-  text-align: center;
-  position: relative;
-  font-size: 17px;
-  padding: 10px;
   background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 17px;
   margin: 20px 0 0 0;
+  padding: 10px;
+  position: relative;
+  text-transform: uppercase;
+  text-align: center;
 }
+
 .view p {
+  color: black;
   font-family: 'Titillium Web', sans-serif;
   font-size: 20px;
   font-weight: 600;
-  position: relative;
-  color: black;
   padding: 10px 20px 20px;
-  text-align: center
+  position: relative;
+  text-align: center;
 }
 .view a.info {
-  display: inline-block;
-  text-decoration: none;
-  padding: 7px 14px;
   background: #000;
+  box-shadow: 0 0 1px #000;
   color: #fff;
+  display: inline-block;
+  padding: 7px 14px;
+  text-decoration: none;
   text-transform: uppercase;
-  box-shadow: 0 0 1px #000
-
 }
+
 .view a.info:hover {
-  box-shadow: 0 0 5px #000
+  box-shadow: 0 0 5px #000;
 }
 
 .view-first img {
   transition: all 0.2s linear;
 }
+
 .view-first .mask {
-  opacity: 0;
   background-color: HSLA(0, 0%, 74%, .9);
+  opacity: 0;
   transition: all 0.4s ease-in-out;
 }
+
 .view-first h2 {
-  transform: translateY(-100px);
   opacity: 0;
+  transform: translateY(-100px);
   transition: all 0.2s ease-in-out;
 }
+
 .view-first p {
-  transform: translateY(100px);
   opacity: 0;
+  transform: translateY(100px);
   transition: all 0.2s linear;
 }
+
 .view-first a.info {
   opacity: 0;
   transition: all 0.2s ease-in-out;
@@ -286,9 +311,11 @@ h2 span {
 .view-first:hover img {
   transform: scale(1.1);
 }
+
 .view-first:hover .mask {
   opacity: 1;
 }
+
 .view-first:hover h2,
 .view-first:hover p,
 .view-first:hover a.info {
@@ -303,14 +330,16 @@ h2 span {
 }
 
 .low-col-adjust {
-  margin-top: 10px;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
+
 /* CONTACT ME SECTION */
+
 .contact-head {
-  padding-top: 20%;
-  margin-bottom: 20px;
   color: black;
+  margin-bottom: 20px;
+  padding-top: 20%;
 }
 
 .heading-contact {
@@ -335,11 +364,11 @@ h2 span {
 }
 
 .close-statement p {
+  color: grey;
   font-family: 'Roboto Slab', serif;
   font-size: 48px;
   font-weight: 800;
   letter-spacing: 0.05em;
-  text-align: center;
-  color: grey;
   padding-top: 80px;
+  text-align: center;
 }
