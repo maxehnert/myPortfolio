@@ -7,6 +7,13 @@ var $ = require('gulp-load-plugins')();
 var rimraf = require('rimraf');
 var exec = require('child_process').exec;
 var prompt = require('gulp-prompt');
+var uglify = require('gulp-uglify');
+
+gulp.task('compress', function() {
+  return gulp.src('lib/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('dist'));
+});
 
 gulp.task('styles', function () {
   return gulp.src('app/styles/main.scss')
