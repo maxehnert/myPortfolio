@@ -96,24 +96,35 @@ h2 span {
 .about {
   text-align: center;
   color: black;
-  padding-top: 10%;
+  padding-top: 5%;
   margin-bottom: 0%;
   margin-top: 0;
 }
 
 .section-heading h2 {
+  text-align: center;
+  color: black;
+  padding-top: 10%;
+  margin-bottom: 0%;
+  margin-top: 0;
   font-size: 48px;
   font-weight: 600;
   letter-spacing: 0.05em;
   font-family: 'Roboto Slab', serif;
 }
 
-.section-heading p, .section-content p {
+.section-content p {
   font-size: 21px;
   line-height: 28px;
   font-weight: 300;
   font-family: 'Titillium Web', sans-serif;
-  margin: 0 80px 10px;
+  margin: 0 0px 10px;
+  text-align: left;
+}
+
+.github-user {
+  color: black;
+  font-weight: 400;
 }
 
 /* Change text to left align when on tablet or phone */
@@ -123,7 +134,7 @@ h2 span {
     text-align: left;
   }
 
-   .section-heading p, .section-content p{
+  .section-content p{
     margin: 0 10px 10px;
   }
 
