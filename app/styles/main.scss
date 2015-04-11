@@ -43,7 +43,17 @@ body {
 
 /* Contact Section Background Image */
 .cd-fixed-bg-end.cd-bg-3 {
-  background-image: url("../images/road.png");
+
+  background-image:
+  /* Little trick to give an overlay that lightens the image
+   * for better contrast of text, faking with gradient
+   * is the easiest way to do this
+   */
+    linear-gradient(
+    HSLA(0, 0%, 100%, 0.07),
+    HSLA(0, 0%, 100%, 0.07)
+    ),
+    url("../images/road.png");
 }
 
 /* About Section */
@@ -131,6 +141,10 @@ h2 span {
 
 /* About Me Section */
 
+.row-about-section {
+  width: 95%;
+}
+
 .about {
   color: black;
   margin-bottom: 0%;
@@ -162,8 +176,29 @@ h2 span {
 
 .github-user {
   color: black;
-  font-weight: 400;
   margin: 0 0px 10px;
+
+  .gt-container {
+    border: none;
+  }
+
+  .user-name {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2.8em;
+  }
+
+  .user-login {
+    font-size: 1.8em;
+  }
+
+  .gt-usr-details {
+    font-size: 1.7em;
+    margin-bottom: 1%;
+  }
+
+  .gt-activity-cnt {
+    font-size: 1.7em;
+  }
 }
 
 
