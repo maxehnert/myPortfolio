@@ -10,6 +10,7 @@ var prompt = require('gulp-prompt');
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
+var critical = require('critical');
 
 gulp.task('compress', function() {
   return gulp.src('app/scripts/*.js')
@@ -125,6 +126,44 @@ gulp.task('build', ['html', 'images', 'fonts', 'extras'], function () {
 gulp.task('default', ['clean'], function () {
   gulp.start('build');
 });
+
+gulp.task('copystyles', function () {
+    return gulp.src(['dist/styles/main.css'])
+        .pipe($.rename({
+            basename: "site" // site.css
+        }))
+        .pipe(gulp.dest('dist/styles'));
+});
+
+// Generate & Inline Critical-path CSS
+gulp.task('critical', ['build', 'copystyles'], function (cb) {
+
+    // At this point, we have our
+    // production styles in main/styles.css
+
+    // As we're going to overwrite this with
+    // our critical-path CSS let's create a copy
+    // of our site-wide styles so we can async
+    // load them in later. We do this with
+    // 'copystyles' above
+
+    critical.generate({
+        base: 'dist/',
+        src: 'index.html',
+        dest: 'styles/site.css',
+        width: 320,
+        height: 480,
+        minify: true
+    }, function(err, output){
+        critical.inline({
+            base: 'dist/',
+            src: 'index.html',
+            dest: 'index-critical.html',
+            minify: true
+        });
+    });
+});
+
 
 // Push a subtree from our `dist` folder
 gulp.task('deploy', function() {
