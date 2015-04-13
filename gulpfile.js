@@ -1,5 +1,4 @@
 'use strict';
-// generated on 2014-12-18 using generator-tiy-webapp 0.0.10
 
 // Require your modules
 var gulp = require('gulp');

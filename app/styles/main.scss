@@ -68,32 +68,7 @@ body {
   background-color: black;
 }
 
-/* Change Formatting for Mobile Use */
 
-@media (max-width: 768px) {
-
-  .section-content p{
-    margin: 0 10px 10px;
-  }
-
-  .cd-fixed-bg.cd-bg-1 {
-    background-image: url("../images/mountain-768.png");
-  }
-
-  .cd-fixed-bg-end.cd-bg-3 {
-    background-image: url("../images/road-768.png");
-  }
-
-  .close-statement p {
-    color: grey;
-    font-family: 'Roboto Slab', serif;
-    font-size: 28px;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    padding-top: 80px;
-    text-align: left;
-  }
-}
 
 /* END Background Images and Colors */
 
@@ -401,4 +376,34 @@ h2 span {
   letter-spacing: 0.05em;
   padding-top: 80px;
   text-align: center;
+}
+
+/* Change Formatting for Mobile Use */
+
+@media (max-width: 768px) {
+
+  .section-content p{
+    margin: 0 10px 10px;
+  }
+
+  .cd-fixed-bg.cd-bg-1 {
+    background-color: HSLA(214, 19%, 58%, 1);
+    background-image: none;
+  //  background-image: url("../images/mountain-768.png");
+  }
+
+  .cd-fixed-bg-end.cd-bg-3 {
+    background-color: HSLA(203, 23%, 64%, 1);
+    background-image: none;
+  //  background-image: url("../images/road-768.png");
+  }
+
+  .close-statement p {
+    color: grey;
+    font-family: 'Roboto Slab', serif;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    padding-top: 80px;
+  }
 }
