@@ -13,6 +13,25 @@ body {
   position: relative;
 }
 
+////////
+
+.bs-testing {
+  height: 20px;
+  background-color: white;
+  border: 3px solid red;
+}
+
+.test-flex-contain {
+  display: flex;
+  flex-flow: column;
+}
+
+.test-flex-contact {
+  margin: auto;
+}
+
+//////
+
 /* Background Images and Colors */
 
 /* Set attributes for background images*/
