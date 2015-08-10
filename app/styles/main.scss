@@ -13,24 +13,10 @@ body {
   position: relative;
 }
 
-////////
-
-.bs-testing {
-  height: 20px;
-  background-color: white;
-  border: 3px solid red;
+.row {
+  margin-left: 0;
+  margin-right: 0;
 }
-
-.test-flex-contain {
-  display: flex;
-  flex-flow: column;
-}
-
-.test-flex-contact {
-  margin: auto;
-}
-
-//////
 
 /* Background Images and Colors */
 
@@ -352,7 +338,16 @@ h2 span {
   margin-top: 10px;
 }
 
-/* CONTACT ME SECTION */
+// CONTACT ME SECTION
+
+.flex-container {
+  display: flex;
+  flex-flow: column;
+}
+
+.flex-item-contact {
+  margin: auto;
+}
 
 .contact-head {
   color: black;
@@ -368,17 +363,12 @@ h2 span {
   border-bottom: 2px solid black;
 }
 
-.hero-heading span {
-  text-decoration: 2px solid white;
-}
-
 .contact-container{
   text-align: center;
 }
 
-.row {
-  margin-left: 0;
-  margin-right: 0;
+.close-statement {
+  width: 90%;
 }
 
 .close-statement p {
@@ -420,3 +410,35 @@ h2 span {
     padding-top: 80px;
   }
 }
+
+
+
+////////
+
+// .flex-container {
+//   display: flex;
+//   flex-flow: column;
+// }
+//
+// .flex-item-contact {
+//   margin: auto;
+// }
+
+// .flex-item-contact-me {
+//   //from multiple selector area
+//   font-family: 'Roboto Slab', serif;
+//   font-size: 48px;
+//   font-weight: 600;
+//   letter-spacing: 0.05em;
+//   text-align: center;
+//
+//   color: black;
+//   margin-bottom: 20px;
+//   padding-top: 20%;
+// }
+
+// .flex-item-contact-statement {
+//   width: 90%;
+// }
+
+//////
