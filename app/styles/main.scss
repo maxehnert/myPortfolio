@@ -13,6 +13,47 @@ body {
   position: relative;
 }
 
+/* Change Formatting for Mobile Use */
+
+@media (max-width: 768px) {
+
+  .section-content p{
+    margin: 0 10px 10px;
+  }
+
+  .cd-fixed-bg.cd-bg-1 {
+    background-color: HSLA(214, 19%, 58%, 1);
+    background-image: none;
+  //  background-image: url("../images/mountain-768.png");
+  }
+
+  .cd-fixed-bg-end.cd-bg-3 {
+    background-color: HSLA(203, 23%, 64%, 1);
+    background-image: none;
+  //  background-image: url("../images/road-768.png");
+  }
+
+  .close-statement p {
+    color: grey;
+    font-family: 'Roboto Slab', serif;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  // Skills content adjustment
+  .flex-container-skills {
+    flex-wrap: wrap;
+  }
+  .flex-skills-icons {
+    justify-content: space-around;
+  }
+}
+
 .row {
   margin-left: 0;
   margin-right: 0;
@@ -219,6 +260,23 @@ h2 span {
   text-align: center;
 }
 
+.flex-container-skills {
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row;
+  margin: 0 10px;
+}
+
+.flex-item-skills-category {
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.flex-skills-icons {
+  justify-content: center;
+  display: flex;
+}
+
 /* MY PROJECTS Section */
 
 .img-responsive {
@@ -381,65 +439,3 @@ h2 span {
   padding-top: 80px;
   text-align: center;
 }
-
-/* Change Formatting for Mobile Use */
-
-@media (max-width: 768px) {
-
-  .section-content p{
-    margin: 0 10px 10px;
-  }
-
-  .cd-fixed-bg.cd-bg-1 {
-    background-color: HSLA(214, 19%, 58%, 1);
-    background-image: none;
-  //  background-image: url("../images/mountain-768.png");
-  }
-
-  .cd-fixed-bg-end.cd-bg-3 {
-    background-color: HSLA(203, 23%, 64%, 1);
-    background-image: none;
-  //  background-image: url("../images/road-768.png");
-  }
-
-  .close-statement p {
-    color: grey;
-    font-family: 'Roboto Slab', serif;
-    font-size: 40px;
-    font-weight: 800;
-    letter-spacing: 0.05em;
-    padding-top: 80px;
-  }
-}
-
-
-
-////////
-
-// .flex-container {
-//   display: flex;
-//   flex-flow: column;
-// }
-//
-// .flex-item-contact {
-//   margin: auto;
-// }
-
-// .flex-item-contact-me {
-//   //from multiple selector area
-//   font-family: 'Roboto Slab', serif;
-//   font-size: 48px;
-//   font-weight: 600;
-//   letter-spacing: 0.05em;
-//   text-align: center;
-//
-//   color: black;
-//   margin-bottom: 20px;
-//   padding-top: 20%;
-// }
-
-// .flex-item-contact-statement {
-//   width: 90%;
-// }
-
-//////
