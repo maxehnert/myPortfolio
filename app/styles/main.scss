@@ -18,6 +18,24 @@ body {
   margin-right: 0;
 }
 
+.my-skills,
+.my-work,
+.contact-head {
+  font-family: 'Roboto Slab', serif;
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.my-skills,
+.my-work {
+  margin-bottom: 5%;
+  margin-top: 0;
+  padding-top: 10%;
+}
+
+
 /* Background Images and Colors */
 
 /* Set attributes for background images*/
@@ -178,23 +196,6 @@ h2 span {
 
 /* My Skills Section */
 
-.my-skills,
-.my-work,
-.contact-head {
-  font-family: 'Roboto Slab', serif;
-  font-size: 48px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-align: center;
-}
-
-.my-skills,
-.my-work {
-  margin-bottom: 5%;
-  margin-top: 0;
-  padding-top: 10%;
-}
-
 .c-img {
   border-bottom: 4px solid HSLA(200,69%,54%,1);
   margin: 5px;
@@ -340,7 +341,7 @@ h2 span {
 
 // CONTACT ME SECTION
 
-.flex-container {
+.flex-container-contact {
   display: flex;
   flex-flow: column;
 }
