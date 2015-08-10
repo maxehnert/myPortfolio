@@ -13,52 +13,12 @@ body {
   position: relative;
 }
 
-/* Change Formatting for Mobile Use */
-
-@media (max-width: 768px) {
-
-  .section-content p{
-    margin: 0 10px 10px;
-  }
-
-  .cd-fixed-bg.cd-bg-1 {
-    background-color: HSLA(214, 19%, 58%, 1);
-    background-image: none;
-  //  background-image: url("../images/mountain-768.png");
-  }
-
-  .cd-fixed-bg-end.cd-bg-3 {
-    background-color: HSLA(203, 23%, 64%, 1);
-    background-image: none;
-  //  background-image: url("../images/road-768.png");
-  }
-
-  .close-statement p {
-    color: grey;
-    font-family: 'Roboto Slab', serif;
-    font-size: 40px;
-    font-weight: 800;
-    letter-spacing: 0.05em;
-    padding-top: 80px;
-  }
-}
-
-@media (max-width: 992px) {
-
-  // Skills content adjustment
-  .flex-container-skills {
-    flex-wrap: wrap;
-  }
-  .flex-skills-icons {
-    justify-content: space-around;
-  }
-}
-
 .row {
   margin-left: 0;
   margin-right: 0;
 }
 
+.about-me,
 .my-skills,
 .my-work,
 .contact-head {
@@ -69,6 +29,7 @@ body {
   text-align: center;
 }
 
+.about-me,
 .my-skills,
 .my-work {
   margin-bottom: 5%;
@@ -174,31 +135,29 @@ h2 span {
 
 /* About Me Section */
 
-.row-about-section {
-  width: 95%;
-}
-
-.about {
+.about-me {
   color: black;
-  margin-bottom: 0%;
-  margin-top: 0;
   padding-top: 5%;
-  text-align: center;
 }
 
-.section-heading h2 {
-  color: black;
-  font-family: 'Roboto Slab', serif;
-  font-size: 48px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  margin-bottom: 0%;
-  margin-top: 0;
-  padding-top: 10%;
-  text-align: center;
+.about-container {
+  display: flex;
+  flex-direction: row;
+  //flex-wrap: wrap;
+  margin: 0 5%;
+  //padding-bottom: 1%;
+}
+
+.flex-item-about {
+  width: 50%;
+}
+
+.section-content {
+  margin-right: 10px;
 }
 
 .section-content p {
+  color: black;
   font-family: 'Titillium Web', sans-serif;
   font-size: 21px;
   font-weight: 300;
@@ -209,7 +168,6 @@ h2 span {
 
 .github-user {
   color: black;
-  margin: 0 0px 10px;
 
   .gt-container {
     border: none;
@@ -233,6 +191,7 @@ h2 span {
     font-size: 1.7em;
   }
 }
+
 
 /* My Skills Section */
 
@@ -437,4 +396,51 @@ h2 span {
   letter-spacing: 0.05em;
   padding-top: 80px;
   text-align: center;
+}
+
+/* Change Formatting for Mobile Use */
+
+@media (max-width: 768px) {
+
+  .cd-fixed-bg.cd-bg-1 {
+    background-color: HSLA(214, 19%, 58%, 1);
+    background-image: none;
+  //  background-image: url("../images/mountain-768.png");
+  }
+
+  .cd-fixed-bg-end.cd-bg-3 {
+    background-color: HSLA(203, 23%, 64%, 1);
+    background-image: none;
+  //  background-image: url("../images/road-768.png");
+  }
+
+  .close-statement p {
+    color: grey;
+    font-family: 'Roboto Slab', serif;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  // Skills content adjustment
+  .flex-container-skills {
+    flex-wrap: wrap;
+  }
+  .flex-skills-icons {
+    justify-content: space-around;
+  }
+  // About content adjustment
+  .flex-item-about {
+    width: 100%;
+  }
+  .about-container {
+    flex-wrap: wrap;
+  }
+  .section-content {
+    margin-right: 0px;
+  }
 }
