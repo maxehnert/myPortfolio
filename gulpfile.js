@@ -18,7 +18,7 @@ gulp.task('compress', function() {
 });
 
 gulp.task('styles', function () {
-  return gulp.src('app/styles/main.scss')
+  return gulp.src(['app/styles/main.scss', 'app/styles/*.css'])
     .pipe($.plumber())
     .pipe($.rubySass({
       style: 'compressed',
