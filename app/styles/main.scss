@@ -24,10 +24,25 @@ body {
 .test-flex-contain {
   display: flex;
   flex-flow: column;
+  text-align: center;
+
+  //width: 90%;
 }
 
 .test-flex-contact {
   margin: auto;
+}
+
+.flex-h1 {
+  color: black;
+  margin-bottom: 20px;
+  padding-top: 20%;
+  font-family: 'Roboto Slab', serif;
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-align: center;
+
 }
 
 //////
