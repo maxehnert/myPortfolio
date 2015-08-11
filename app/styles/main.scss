@@ -135,21 +135,22 @@ h2 span {
 }
 
 
-//////
-.bs-testing {
-  height: 20px;
-  border: 5px solid red;
-}
 
 .flex-adjustment-container {
-  padding-top: 10%;
   padding-right: 10%;
+  padding-top: 10%;
 }
+
 .flex-container-home {
+  align-items: flex-end;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-//  padding-right: 12%;
+}
+
+.flex-h2-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .flex-item-home {
@@ -161,16 +162,11 @@ h2 span {
 }
 
 .looper-content {
-  //  margin-bottom: 15px;
-    font-size: 21px;
-    font-weight: 200;
+  font-size: 21px;
+  font-weight: 200;
 }
 
-.flex-h2-container{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
+
 ///////
 
 
@@ -230,6 +226,8 @@ h2 span {
 
   .gt-activity-cnt {
     font-size: 1.7em;
+    height: 50vh;
+    margin-bottom: 10px;
   }
 }
 
