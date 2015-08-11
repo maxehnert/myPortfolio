@@ -134,6 +134,46 @@ h2 span {
   position: relative;
 }
 
+
+//////
+.bs-testing {
+  height: 20px;
+  border: 5px solid red;
+}
+
+.flex-adjustment-container {
+  padding-top: 10%;
+  padding-right: 10%;
+}
+.flex-container-home {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+//  padding-right: 12%;
+}
+
+.flex-item-home {
+  align-self: auto;
+}
+
+.my-name-home {
+  border-bottom: 2px solid white;
+}
+
+.looper-content {
+  //  margin-bottom: 15px;
+    font-size: 21px;
+    font-weight: 200;
+}
+
+.flex-h2-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+///////
+
+
 /* About Me Section */
 
 .about-me {
@@ -377,7 +417,7 @@ h2 span {
   color: black;
 }
 
-.my-name {
+.my-name-contact {
   border-bottom: 2px solid black;
 }
 
@@ -423,6 +463,29 @@ h2 span {
     letter-spacing: 0.05em;
     padding-top: 80px;
   }
+
+  .flex-mobile-container-home {
+    display: flex;
+    align-items: center;
+  }
+  .flex-h2-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .flex-h2-container h2 {
+    margin-top: 0;
+  }
+  .flex-adjustment-container {
+    padding: inherit;
+    margin: auto;
+  }
+  .flex-container-home {
+    align-items: center;
+  }
+  // .my-name-home {
+  // //  width:100%;
+  // }
 }
 
 @media (max-width: 992px) {
