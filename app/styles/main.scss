@@ -199,6 +199,43 @@ body {
   //font-weight: bold;
   text-decoration: none;
 }
+
+// Hamburger Icon
+.burger {
+	position: relative;
+	display: block;
+	height: 50px;
+	width: 50px;
+	background: HSLA(200, 69%, 54%, 1);
+}
+.burger span {
+  position: absolute;
+  top: 23px;
+  left: 10px;
+  width: 30px;
+  height: 5px;
+  background: white;
+  border-radius: 1rem;
+  margin:auto;
+}
+.burger span:before,
+.burger span:after {
+  content: '';
+  position: absolute;
+  //left: 1px;
+  width: 30px;
+  height: 5px;
+  background: white;
+  border-radius: 1rem;
+  margin: auto;
+}
+.burger span:before {
+  top: -10px;
+}
+.burger span:after {
+  top: 10px;
+}
+
 ////
 
 /* Home Section */
