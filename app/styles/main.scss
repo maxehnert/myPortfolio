@@ -119,6 +119,68 @@ body {
   border-radius:0px;
 }
 
+//// nav testing
+.navigation {
+  list-style: none;
+  margin: 0;
+
+  background: deepskyblue;
+
+   display: flex;
+
+   -webkit-flex-flow: row wrap;
+  // justify-content: flex-end;
+
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+.navigation a:hover {
+  background: darken(deepskyblue, 2%);
+}
+.flex-nav-brand {
+  text-align: left;
+}
+.asdf {
+  display: flex;
+  -webkit-flex-flow: row;
+  justify-content: flex-start;
+  align-self: center;
+  font-family: 'Roboto Slab', serif;
+  font-size: 25px;
+  padding: 0;
+}
+.asdfv{
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-end;
+  align-self: center;
+  flex-grow: 3;
+
+}
+
+.asdfv a:hover {
+  background-color: transparent !important;
+  border-bottom-color: HSLA(200, 69%, 54%, 1);
+  border-bottom-style: solid;
+  border-bottom-width: 4px;
+  border-radius: 0px;
+  color: white !important;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+////
+
 /* Home Section */
 
 /* Underlines my name */
@@ -433,6 +495,27 @@ h2 span {
 
 /* Change Formatting for Mobile Use */
 
+@media (max-width: 992px) {
+
+  // Skills Content Adjustments
+  .flex-container-skills {
+    flex-wrap: wrap;
+  }
+  .flex-skills-icons {
+    justify-content: space-around;
+  }
+  // About Content Adjustments
+  .flex-item-about {
+    width: 100%;
+  }
+  .about-container {
+    flex-wrap: wrap;
+  }
+  .section-content {
+    margin-right: 0px;
+  }
+}
+
 @media (max-width: 768px) {
 
   .cd-fixed-bg.cd-bg-1 {
@@ -481,23 +564,9 @@ h2 span {
   }
 }
 
-@media (max-width: 992px) {
-
-  // Skills Content Adjustments
-  .flex-container-skills {
-    flex-wrap: wrap;
-  }
-  .flex-skills-icons {
-    justify-content: space-around;
-  }
-  // About Content Adjustments
-  .flex-item-about {
-    width: 100%;
-  }
-  .about-container {
-    flex-wrap: wrap;
-  }
-  .section-content {
-    margin-right: 0px;
+@media (max-width: 450px) {
+  // Contact Content Adjustments
+  .quote {
+    display: none;
   }
 }
