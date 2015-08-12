@@ -16,7 +16,6 @@ $('.cd-color-2').waypoint(function(direction) {
   offset: '50%'
 });
 
-
 /* Github Profile Activity Widget*/
 Github.userActivity({
   username: "maxehnert",
@@ -25,18 +24,20 @@ Github.userActivity({
 });
 
 // Display an active state for the selected nav link
-$('.asdfv a').click(function() {
-  $('.asdfv a').removeClass('active-nav');
+$('.navigation-link a').click(function() {
+  $('.navigation-link a').removeClass('active-nav');
   $(this).addClass('active-nav');
 });
 
-// Toggle the hamburger icon
+// Toggle the hamburger icon and display nav links
 $('.burger').click(function(){
   $(this).toggleClass('open');
-  $('.asdfv-collapsed').toggleClass('asdfv-collapsed-hide');
+  $('.navigation-link-collapsed').toggleClass('navigation-link-collapsed-hide');
 });
-$('.asdfv-collapsed a').click(function() {
-  $('.asdfv-collapsed').toggleClass('asdfv-collapsed-hide');
+
+// Toggle nav links and hamburger after clicking on one
+$('.navigation-link-collapsed a').click(function() {
+  $('.navigation-link-collapsed').toggleClass('navigation-link-collapsed-hide');
   $('.burger').toggleClass('open');
 });
 

@@ -97,48 +97,19 @@ body {
 
 /* Navigation */
 
-.navbar-brand {
-  font-family: 'Roboto Slab', serif;
-  font-size: 25px;
-}
-
-.nav-pills > .active > a,
-.nav-pills > .active > a:hover,
-.nav-pills > li > a:hover {
-  background-color: transparent !important;
-  border-bottom-color: HSLA(200, 69%, 54%, 1);
-  border-bottom-style: solid;
-  border-bottom-width: 4px;
-  border-radius: 0px;
-  color: white !important;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.nav-pills > li > a {
-  border-radius:0px;
-}
-
-//// nav testing
-
 .navigation {
   list-style: none;
   margin: 0;
-
   background: black;
-
-   display: flex;
-
-   -webkit-flex-flow: row wrap;
-  // justify-content: flex-end;
-
+  display: flex;
+  -webkit-flex-flow: row wrap;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 9999;
 }
 
-.asdfv a {
+.navigation-link a {
   text-decoration: none;
   display: block;
   padding: 1em;
@@ -155,7 +126,8 @@ body {
   display: block;
   color: white;
 }
-.asdf {
+
+.navigation-title {
   display: flex;
   -webkit-flex-flow: row;
   justify-content: flex-start;
@@ -164,7 +136,8 @@ body {
   font-size: 25px;
   padding: 0;
 }
-.asdfv{
+
+.navigation-link{
   display: flex;
   -webkit-flex-flow: row wrap;
   justify-content: flex-end;
@@ -173,19 +146,18 @@ body {
 
 }
 
-.asdf a:hover {
+.navigation-title a:hover {
   color: HSLA(200, 69%, 54%, 1);
   text-decoration: none;
 }
 
-.asdfv a:hover {
+.navigation-link a:hover {
   background-color: transparent;
   border-bottom-color: HSLA(200, 69%, 54%, 1);
   border-bottom-style: solid;
   border-bottom-width: 4px;
   border-radius: 0px;
   color: HSLA(200, 69%, 54%, 1);
-  //font-weight: bold;
   text-decoration: none;
 }
 
@@ -196,11 +168,8 @@ body {
   border-bottom-width: 4px;
   border-radius: 0px;
   color: HSLA(200, 69%, 54%, 1);
-  //font-weight: bold;
   text-decoration: none;
 }
-
-////
 
 /* Home Section */
 
@@ -591,7 +560,6 @@ h2 span {
     margin-top: 0;
   }
 
-
   // Hamburger Icon
   .burger {
   	position: relative;
@@ -601,9 +569,11 @@ h2 span {
   	//background: HSLA(200, 69%, 54%, 1);
     background: transparent;
   }
+
   .burger:hover {
     background: HSLA(200, 69%, 54%, 1) !important;
   }
+
   .burger span {
     position: absolute;
     top: 23px;
@@ -614,20 +584,22 @@ h2 span {
     border-radius: 1rem;
     margin:auto;
   }
+
   .burger span:before,
   .burger span:after {
     content: '';
     position: absolute;
-    //left: 1px;
     width: 30px;
     height: 5px;
     background: white;
     border-radius: 1rem;
     margin: auto;
   }
+
   .burger span:before {
     top: -10px;
   }
+
   .burger span:after {
     top: 10px;
   }
@@ -653,28 +625,27 @@ h2 span {
     transform: rotate(135deg);
   }
 
+  // Change Navigation Layout for Mobile
   .navigation {
     -webkit-flex-flow: column;
   }
-  .asdf {
+
+  .navigation-title {
     justify-content: space-between;
     align-self: auto;
     align-items: center;
   }
 
-  .asdfv-collapsed{
+  .navigation-link-collapsed{
     display: flex;
     -webkit-flex-flow: column;
     justify-content: flex-start;
     align-self: auto;
-    //align-items: auto;
-    //flex-grow: 3;
-
   }
-  .asdfv-collapsed-hide {
+
+  .navigation-link-collapsed-hide {
     display: none;
   }
-
 }
 
 @media (max-width: 450px) {

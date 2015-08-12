@@ -16,7 +16,6 @@ $('.cd-color-2').waypoint(function(direction) {
   offset: '50%'
 });
 
-
 /* Github Profile Activity Widget*/
 Github.userActivity({
   username: "maxehnert",
@@ -24,9 +23,22 @@ Github.userActivity({
   limit: 20
 });
 
-$('.asdfv a').click(function() {
-  $('.asdfv a').removeClass('active-nav');
+// Display an active state for the selected nav link
+$('.navigation-link a').click(function() {
+  $('.navigation-link a').removeClass('active-nav');
   $(this).addClass('active-nav');
+});
+
+// Toggle the hamburger icon and display nav links
+$('.burger').click(function(){
+  $(this).toggleClass('open');
+  $('.navigation-link-collapsed').toggleClass('navigation-link-collapsed-hide');
+});
+
+// Toggle nav links and hamburger after clicking on one
+$('.navigation-link-collapsed a').click(function() {
+  $('.navigation-link-collapsed').toggleClass('navigation-link-collapsed-hide');
+  $('.burger').toggleClass('open');
 });
 
 // Display a quote at the end of the Contact section
