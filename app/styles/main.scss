@@ -133,6 +133,36 @@ h2 span {
   position: relative;
 }
 
+.home-adjustment-container {
+  padding-right: 10%;
+  padding-top: 10%;
+}
+
+.flex-container-home {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-h2-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flex-item-home {
+  align-self: auto;
+}
+
+.my-name-home {
+  border-bottom: 2px solid white;
+}
+
+.looper-content {
+  font-size: 21px;
+  font-weight: 200;
+}
+
 /* About Me Section */
 
 .about-me {
@@ -189,6 +219,8 @@ h2 span {
 
   .gt-activity-cnt {
     font-size: 1.7em;
+    height: 50vh;
+    margin-bottom: 10px;
   }
 }
 
@@ -376,7 +408,7 @@ h2 span {
   color: black;
 }
 
-.my-name {
+.my-name-contact {
   border-bottom: 2px solid black;
 }
 
@@ -422,18 +454,42 @@ h2 span {
     letter-spacing: 0.05em;
     padding-top: 80px;
   }
+
+  // Home Content Adjustments
+  .flex-mobile-container-home {
+    display: flex;
+    align-items: center;
+  }
+  .home-adjustment-container {
+    padding: inherit;
+    margin: auto;
+  }
+
+  .flex-container-home {
+    align-items: center;
+  }
+
+  .flex-h2-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flex-h2-container h2 {
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 992px) {
 
-  // Skills content adjustment
+  // Skills Content Adjustments
   .flex-container-skills {
     flex-wrap: wrap;
   }
   .flex-skills-icons {
     justify-content: space-around;
   }
-  // About content adjustment
+  // About Content Adjustments
   .flex-item-about {
     width: 100%;
   }
