@@ -24,6 +24,11 @@ Github.userActivity({
   limit: 20
 });
 
+$('.asdfv a').click(function() {
+  $('.asdfv a').removeClass('active-nav');
+  $(this).addClass('active-nav');
+});
+
 // Display a quote at the end of the Contact section
 function quoteLoop() {
   var quoteArray = [
