@@ -134,9 +134,7 @@ h2 span {
   position: relative;
 }
 
-
-
-.flex-adjustment-container {
+.home-adjustment-container {
   padding-right: 10%;
   padding-top: 10%;
 }
@@ -165,10 +163,6 @@ h2 span {
   font-size: 21px;
   font-weight: 200;
 }
-
-
-///////
-
 
 /* About Me Section */
 
@@ -462,33 +456,34 @@ h2 span {
     padding-top: 80px;
   }
 
+  // Home Content Adjustments
   .flex-mobile-container-home {
     display: flex;
     align-items: center;
   }
+  .home-adjustment-container {
+    padding: inherit;
+    margin: auto;
+  }
+
+  .flex-container-home {
+    align-items: center;
+  }
+
   .flex-h2-container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   .flex-h2-container h2 {
     margin-top: 0;
   }
-  .flex-adjustment-container {
-    padding: inherit;
-    margin: auto;
-  }
-  .flex-container-home {
-    align-items: center;
-  }
-  // .my-name-home {
-  // //  width:100%;
-  // }
 }
 
 @media (max-width: 992px) {
 
-  // Skills content adjustment
+  // Skills Content Adjustments
   .flex-container-skills {
     flex-wrap: wrap;
   }
