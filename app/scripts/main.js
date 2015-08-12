@@ -33,6 +33,11 @@ $('.asdfv a').click(function() {
 // Toggle the hamburger icon
 $('.burger').click(function(){
   $(this).toggleClass('open');
+  $('.asdfv-collapsed').toggleClass('asdfv-collapsed-hide');
+});
+$('.asdfv-collapsed a').click(function() {
+  $('.asdfv-collapsed').toggleClass('asdfv-collapsed-hide');
+  $('.burger').toggleClass('open');
 });
 
 // Display a quote at the end of the Contact section

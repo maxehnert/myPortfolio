@@ -200,63 +200,6 @@ body {
   text-decoration: none;
 }
 
-// Hamburger Icon
-.burger {
-	position: relative;
-	display: block;
-	height: 50px;
-	width: 50px;
-	background: HSLA(200, 69%, 54%, 1);
-}
-.burger span {
-  position: absolute;
-  top: 23px;
-  left: 10px;
-  width: 30px;
-  height: 5px;
-  background: white;
-  border-radius: 1rem;
-  margin:auto;
-}
-.burger span:before,
-.burger span:after {
-  content: '';
-  position: absolute;
-  //left: 1px;
-  width: 30px;
-  height: 5px;
-  background: white;
-  border-radius: 1rem;
-  margin: auto;
-}
-.burger span:before {
-  top: -10px;
-}
-.burger span:after {
-  top: 10px;
-}
-
-// Animate the burger icon on toggle click
-.burger.open span {
-  background: transparent;
-}
-
-.burger.open span:before,
-.burger.open span:after {
-  top: 0px;
-  width: 50px;
-  margin: auto;
-  left: -10px;
-}
-
-.burger.open span:before {
-  transform: rotate(-135deg);
-}
-
-.burger.open span:after {
-  transform: rotate(135deg);
-}
-
 ////
 
 /* Home Section */
@@ -647,6 +590,91 @@ h2 span {
   .flex-h2-container h2 {
     margin-top: 0;
   }
+
+
+  // Hamburger Icon
+  .burger {
+  	position: relative;
+  	display: block;
+  	height: 50px;
+  	width: 50px;
+  	//background: HSLA(200, 69%, 54%, 1);
+    background: transparent;
+  }
+  .burger:hover {
+    background: HSLA(200, 69%, 54%, 1) !important;
+  }
+  .burger span {
+    position: absolute;
+    top: 23px;
+    left: 10px;
+    width: 30px;
+    height: 5px;
+    background: white;
+    border-radius: 1rem;
+    margin:auto;
+  }
+  .burger span:before,
+  .burger span:after {
+    content: '';
+    position: absolute;
+    //left: 1px;
+    width: 30px;
+    height: 5px;
+    background: white;
+    border-radius: 1rem;
+    margin: auto;
+  }
+  .burger span:before {
+    top: -10px;
+  }
+  .burger span:after {
+    top: 10px;
+  }
+
+  // Animate the burger icon on toggle click
+  .burger.open span {
+    background: transparent;
+  }
+
+  .burger.open span:before,
+  .burger.open span:after {
+    top: 0px;
+    width: 50px;
+    margin: auto;
+    left: -10px;
+  }
+
+  .burger.open span:before {
+    transform: rotate(-135deg);
+  }
+
+  .burger.open span:after {
+    transform: rotate(135deg);
+  }
+
+  .navigation {
+    -webkit-flex-flow: column;
+  }
+  .asdf {
+    justify-content: space-between;
+    align-self: auto;
+    align-items: center;
+  }
+
+  .asdfv-collapsed{
+    display: flex;
+    -webkit-flex-flow: column;
+    justify-content: flex-start;
+    align-self: auto;
+    //align-items: auto;
+    //flex-grow: 3;
+
+  }
+  .asdfv-collapsed-hide {
+    display: none;
+  }
+
 }
 
 @media (max-width: 450px) {
