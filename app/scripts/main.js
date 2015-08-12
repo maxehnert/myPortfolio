@@ -24,9 +24,15 @@ Github.userActivity({
   limit: 20
 });
 
+// Display an active state for the selected nav link
 $('.asdfv a').click(function() {
   $('.asdfv a').removeClass('active-nav');
   $(this).addClass('active-nav');
+});
+
+// Toggle the hamburger icon
+$('.burger').click(function(){
+  $(this).toggleClass('open');
 });
 
 // Display a quote at the end of the Contact section

@@ -236,6 +236,27 @@ body {
   top: 10px;
 }
 
+// Animate the burger icon on toggle click
+.burger.open span {
+  background: transparent;
+}
+
+.burger.open span:before,
+.burger.open span:after {
+  top: 0px;
+  width: 50px;
+  margin: auto;
+  left: -10px;
+}
+
+.burger.open span:before {
+  transform: rotate(-135deg);
+}
+
+.burger.open span:after {
+  transform: rotate(135deg);
+}
+
 ////
 
 /* Home Section */
