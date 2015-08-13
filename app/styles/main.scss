@@ -320,6 +320,16 @@ h2 span {
 }
 
 /* MY PROJECTS Section */
+.flex-container-work {
+  display: flex;
+  flex-flow: row wrap;
+//  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.flex-item-work {
+  flex-grow: 3;
+  align-self: stretch;
+}
 
 .img-responsive {
   width: 100% \9;
