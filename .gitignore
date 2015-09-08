@@ -6,3 +6,5 @@ test/bower_components
 .DS_Store
 .idea/*
 .env
+app/images
+dist/images
