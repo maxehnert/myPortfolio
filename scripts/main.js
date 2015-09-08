@@ -69,9 +69,9 @@ function quoteLoop() {
 
   var val = Math.floor(Math.random() * (12 - 0 + 1)) + 0;
 
-  console.log(quoteArray[val]);
-
   $('.quote').text(quoteArray[val]);
 };
 
+(function () {
 quoteLoop();
+})();
