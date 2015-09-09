@@ -1,4 +1,3 @@
-// @import '../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
 
 body,
 html,
@@ -177,7 +176,6 @@ h2 span {
   border-bottom: 2px solid white;
 }
 
-
 .container {
   position: relative;
 }
@@ -213,7 +211,6 @@ h2 span {
 }
 
 /* About Me Section */
-
 .about-me {
   color: black;
   padding-top: 5%;
@@ -271,9 +268,7 @@ h2 span {
   }
 }
 
-
 /* My Skills Section */
-
 .c-img {
   border-bottom: 4px solid HSLA(200,69%,54%,1);
   margin: 5px;
@@ -325,11 +320,11 @@ h2 span {
   display: flex;
   flex-flow: row;
 
-    .img-container {
-      flex: auto;
-      margin: 5px 10px;
-      max-width: 750px;
-    }
+  .img-container {
+    flex: auto;
+    margin: 5px 10px;
+    max-width: 750px;
+  }
 }
 
 .work-description {
@@ -347,6 +342,7 @@ h2 span {
     font-weight: 300;
     line-height: 30px;
   }
+
   .info {
     font-weight: bold;
   }
@@ -448,13 +444,11 @@ h2 span {
   .cd-fixed-bg.cd-bg-1 {
     background-color: HSLA(214, 19%, 58%, 1);
     background-image: none;
-  //  background-image: url("../images/mountain-768.png");
   }
 
   .cd-fixed-bg-end.cd-bg-3 {
     background-color: HSLA(203, 23%, 64%, 1);
     background-image: none;
-  //  background-image: url("../images/road-768.png");
   }
 
   .close-statement p {
@@ -497,7 +491,6 @@ h2 span {
   	display: block;
   	height: 50px;
   	width: 50px;
-  	//background: HSLA(200, 69%, 54%, 1);
     background: transparent;
   }
 
