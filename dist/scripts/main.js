@@ -14,6 +14,10 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 });
 
+$('.burger').click(function(){
+  return false;
+});
+
 //scrolls to targeted id
 $('body').scrollspy({ target: '.navbar-fixed-top' });
 
@@ -78,11 +82,10 @@ function quoteLoop() {
       "The unexamined life is not worth living. -socrates"
   ];
 
-  var val = Math.floor(Math.random() * (12 - 0 + 1)) + 0;
+  var val = Math.floor( Math.random() * 12 );
 
   $('.quote').text(quoteArray[val]);
+
 };
 
-(function () {
-quoteLoop();
-})();
+window.onload = quoteLoop();
