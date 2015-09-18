@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <!-- bower:css -->
     <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
+    <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css">
     <link rel="stylesheet" href="../bower_components/githubjs/dist/github.min.css">
-    <link rel="stylesheet" href="../bower_components/looper/src/looper.css" />
+    <link rel="stylesheet" href="../bower_components/looper/src/looper.css">
     <link rel="stylesheet" href="styles/animate.css">
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbower -->
@@ -38,7 +38,7 @@
       s.parentNode.insertBefore(wf, s);
     })();
   </script>
-  <body id='top' data-spy="scroll" data-target=".navbar-fixed-top">
+  <body id="top" data-spy="scroll" data-target=".navbar-fixed-top">
     <!-- Hello curious viewer! Welcome to my portfolio website. I hope you enjoy browsing.
     If you have any questions or comments, or if you're looking to hire a front end developer don't hesitate to email me or tweet to me.
     Enjoy!
@@ -48,22 +48,22 @@
 <ul class="navigation navbar-fixed-top">
   <div class="navigation-title">
     <a href="#" class="flex-nav-brand">MAX EHNERT</a>
-    <a href="#" class="burger">
+    <a href="#" class="burger js-burger">
       <span></span>
     </a>
   </div>
   <div class="navigation-link navigation-link-collapsed navigation-link-collapsed-hide">
-    <li><a href="#home" class='scrollto active-nav'>Home</a></li>
-    <li><a href="#about" class='scrollto'>About Me</a></li>
-    <li><a href="#skills" class='scrollto skillcheck'>Skills</a></li>
-    <li><a href="#work" class='scrollto'>Work</a></li>
-    <li><a href="#contact" class='scrollto'>Contact Me</a></li>
+    <li><a href="#home" class="scrollto active-nav">Home</a></li>
+    <li><a href="#about" class="scrollto">About Me</a></li>
+    <li><a href="#skills" class="scrollto skillcheck">Skills</a></li>
+    <li><a href="#work" class="scrollto">Work</a></li>
+    <li><a href="#contact" class="scrollto">Contact Me</a></li>
   </div>
 </ul>
 <!--  END Navigation -->
 
 <!-- Home View Section -->
-<div class="flex-mobile-container-home cd-fixed-bg cd-bg-1" id="home">
+<div id="home" class="flex-mobile-container-home cd-fixed-bg cd-bg-1">
   <div class="home-adjustment-container">
     <div class="flex-container-home">
       <div class="flex-h2-container">
@@ -79,15 +79,15 @@
   		</div>
       <div class="flex-item-home">
         <a target="_blank" href="mailto:max.ehnert@gmail.com?Subject=Hello%20I%20would%20like%20to%20talk%20about%20your%20experience">
-          <img src="images/mail.png" data-toggle="tooltip" data-placement="bottom" title="Email Me"></a>
+          <img src="images/mail.png"  alt="email link" data-toggle="tooltip" data-placement="bottom" title="Email Me"></a>
         <a target="_blank" href="https://github.com/maxehnert">
-          <img src="images/github3.png" data-toggle="tooltip" data-placement="bottom" title="My Repos"></a>
+          <img src="images/github3.png" alt="github account link" data-toggle="tooltip" data-placement="bottom" title="My Repos"></a>
         <a target="_blank" href="https://www.linkedin.com/pub/max-ehnert/80/203/624">
-          <img src="images/linkedin.png" data-toggle="tooltip" data-placement="bottom" title="Let's Connect"></a>
+          <img src="images/linkedin.png" alt="linkedin account link" data-toggle="tooltip" data-placement="bottom" title="Let's Connect"></a>
         <a target="_blank" href="https://twitter.com/ehnertm">
-          <img src="images/twitter3.png" data-toggle="tooltip" data-placement="bottom" title="@ehnertm"></a>
+          <img src="images/twitter3.png" alt="twitter account link" data-toggle="tooltip" data-placement="bottom" title="@ehnertm"></a>
         <a target="_blank" href="https://www.dropbox.com/s/za5jbrp0q79sctp/MaxEhnert.pdf?dl=0" >
-          <img src="images/file3.png" data-toggle="tooltip" data-placement="bottom" title="My Resume"></a>
+          <img src="images/file3.png" alt="resume link" data-toggle="tooltip" data-placement="bottom" title="My Resume"></a>
       </div>
     </div>
   </div>
@@ -96,7 +96,7 @@
 
 <!-- Start About Me Section -->
 <div class="cd-scrolling-bg cd-color-1">
-  <h1 class="about-me" id="about">About Me</h1>
+  <h1 id="about" class="about-me">About Me</h1>
   <div class="about-container">
       <div class="flex-item-about section-content">
         <p>I have always had a passion for building things. This can be seen from my hobbies and previous work experience. I enjoy taking a project from concept to finished product.</p>
@@ -112,33 +112,33 @@
 <!-- END About Me Section -->
 
 <!-- My Skills Section -->
-<div class='cd-scrolling-bg cd-color-2'>
-  <h1 class='my-skills' id='skills'>My Skills</h1>
+<div class="cd-scrolling-bg cd-color-2">
+  <h1 id="skills" class="my-skills">My Skills</h1>
   <div class="flex-container-skills">
     <div class="flex-item-skills-category ">
-      <div class="c-img flex-skills-icons">
-        <img src="images/html5.png" class="img-skill imgleft imgnone">
-        <img src="images/js.png" class="img-skill imgleft imgnone">
-        <img src="images/jquery.png" class="img-skill imgleft imgnone">
+      <div class="skills-img-container flex-skills-icons">
+        <img src="images/html5.png" alt="html5 logo" class="img-skill js-img-skill js-imgleft imgnone">
+        <img src="images/js.png" alt="JavaScript logo" class="img-skill js-img-skill js-imgleft imgnone">
+        <img src="images/jquery.png" alt="jQuery logo" class="img-skill js-img-skill js-imgleft imgnone">
       </div>
-      <p class='skills-p'>
+      <p class="skills-p">
         I am knowledgable of HTML5 and CSS3 best practices. I am very experienced writing JavaScript as-well-as using libraries such as jQuery and lodash. This can be seen in all of my featured applications below.
       </p>
     </div>
     <div class="flex-item-skills-category">
-      <div class="c-img flex-skills-icons">
-        <img src="images/angular.png" class="img-skill imgcenter imgnone">
-        <img src="images/backbone.png" class="img-skill imgcenter imgnone">
-        <img src="images/react.png" class="img-skill imgcenter imgnone">
+      <div class="skills-img-container flex-skills-icons">
+        <img src="images/angular.png" alt="Angular logo" class="img-skill js-img-skill js-imgcenter imgnone">
+        <img src="images/backbone.png" alt="Backbone logo" class="img-skill js-img-skill js-imgcenter imgnone">
+        <img src="images/react.png" alt="React logo" class="img-skill js-img-skill js-imgcenter imgnone">
       </div>
-      <p class='skills-p'>
+      <p class="skills-p">
         I have experience using serveral front end MVC frameworks in small and large applications. I am currently experimenting with the React/Flux framework.
       </p>
     </div>
     <div class="flex-item-skills-category">
-      <div class="c-img flex-skills-icons">
-        <img src="images/Laravel.png" class="img-skill imgright imgnone">
-        <img src="images/sqlite.png" class="img-skill imgright imgnone">
+      <div class="skills-img-container flex-skills-icons">
+        <img src="images/Laravel.png" alt="Laravel logo" class="img-skill js-img-skill js-imgright imgnone">
+        <img src="images/sqlite.png" alt="sqlite logo" class="img-skill js-img-skill js-imgright imgnone">
       </div>
       <p class="skills-p">
         Having built several interfaces utilizing Laravel I am experienced working in this environment. Using it with SQLite and deploying on AWS. I use Laravel heavily with JavaScript on the client side.
@@ -149,17 +149,17 @@
 <!-- END My Skills Section -->
 
 <!-- My Work Section -->
-<div class='cd-scrolling-bg cd-color-3'>
-  <h1 class='my-work' id='work'>My Work</h1>
+<div class="cd-scrolling-bg cd-color-3">
+  <h1 id="work" class="my-work">My Work</h1>
   <div class="flex-container-work">
     <div class="flex-item-work">
-      <div class="img-container"><img alt="payment transaction" class="img-responsive" src="images/transactionapp750x420px.png" /></div>
+      <div class="img-container"><img src="images/transactionapp750x420px.png" alt="payment transaction" class="img-responsive"></div>
       <div class="work-description">
         <h2>Transaction Processor</h2>
-        <p>Perform mock payment transactions and view payment history. <br />
-          Built with accessibility in mind. <br />
-          Utilized many SCSS features to reduce the amount of CSS written. <br />
-          This is a 'full stack' application with persistent data to a NoSQL database. <br />
+        <p>Perform mock payment transactions and view payment history. <br>
+          Built with accessibility in mind. <br>
+          Utilized many SCSS features to reduce the amount of CSS written. <br>
+          This is a 'full stack' application with persistent data to a NoSQL database. <br>
           Tech used: Node.JS, Express, Mongoose, MongoDB, jQuery, SCSS, Bootstrap</p>
         <a target="_blank" href="http://still-reaches-4133.herokuapp.com/" class="info">Live Demo</a>
         <span>|</span>
@@ -167,12 +167,12 @@
       </div>
     </div>
     <div class="flex-item-work">
-     <div class="img-container"><img alt="word cloud" class="img-responsive" src="images/wordcloud750x420px.png" /></div>
+     <div class="img-container"><img src="images/wordcloud750x420px.png" alt="word cloud" class="img-responsive"></div>
      <div class="work-description">
         <h2>Word Cloud</h2>
-        <p>Sorting algorithm pulls out the most frequent words from a text input. <br />
-          The words are sorted and sized based on frequency then displayed within a canvas element. <br />
-          Built with simplicity in mind. <br />
+        <p>Sorting algorithm pulls out the most frequent words from a text input. <br>
+          The words are sorted and sized based on frequency then displayed within a canvas element. <br>
+          Built with simplicity in mind. <br>
           Tech used: vanilla ES6 JavaScript, HTML5 Canvas</p>
         <a target="_blank" href="http://maxehnert.github.io/Word-Cloud" class="info">Live Demo</a>
         <span>|</span>
@@ -180,12 +180,12 @@
       </div>
     </div>
     <div class="flex-item-work">
-      <div class="img-container"><img alt="mechanic finder" class="img-responsive" src="images/mechfinder750x420px.png" /></div>
+      <div class="img-container"><img src="images/mechfinder750x420px.png" alt="mechanic finder" class="img-responsive"></div>
       <div class="work-description">
         <h2>Mechanic Finder</h2>
-        <p>Service app to connect people with independent mechanics. <br />
-           This was my first app built with an MVC framework. <br />
-           It is a full CRUD app with AJAX calls to outside APIs and persistent data.<br />
+        <p>Service app to connect people with independent mechanics. <br>
+           This was my first app built with an MVC framework. <br>
+           It is a full CRUD app with AJAX calls to outside APIs and persistent data.<br>
            Tech used: Angular.js, jQuery, SCSS, Bootstrap</p>
         <a target="_blank" href="http://maxehnert.github.io/final_parse" class="info">Live Demo</a>
         <span>|</span>
@@ -193,22 +193,22 @@
       </div>
     </div>
     <div class="flex-item-work">
-      <div class="img-container"><img alt="portfolio" class="img-responsive" src="images/portfolio750x420px.png" /></div>
+      <div class="img-container"><img src="images/portfolio750x420px.png" alt="portfolio" class="img-responsive"></div>
       <div class="work-description">
         <h2>My Portfolio</h2>
-        <p>It is a little odd to include the portfolio within the portfolio, but it's a great example of my UI abilities. <br />
-           I used flexbox heavily to avoid the need for third party CSS frameworks (bootstrap) while still remaining responsive (check it out!). <br />
+        <p>It is a little odd to include the portfolio within the portfolio, but it's a great example of my UI abilities. <br>
+           I used flexbox heavily to avoid the need for third party CSS frameworks (bootstrap) while still remaining responsive (check it out!). <br>
            I also focused heavily on improving the speed of the site to get a high Google PageSpeed score.</p>
         <a target="_blank" href="https://github.com/maxehnert/myPortfolio" class="info">GitHub Repo</a>
       </div>
     </div>
     <div class="flex-item-work">
-      <div class="img-container"><img class="img-responsive" src="images/code750x420px.png" /></div>
+      <div class="img-container"><img src="images/code750x420px.png" alt="code screenshot" class="img-responsive"></div>
       <div class="work-description">
         <h2>Want to See More?</h2>
-        <p>These are just a few of the projects I have built.<br />
+        <p>These are just a few of the projects I have built.<br>
            Within my GitHub repos you'll find things like algorithm problem sets in ES6, Angular.js, React.js, Laravel, testing tools (karma, Jasmine, Mocha), task runners (Gulp is preferred but webpack has a bright future), and many more things.</p>
-        <a target="_blank" href="https://github.com/maxehnert?tab=repositories" class="info">GitHub Repo</a>
+        <a target="_blank" href="https://github.com/maxehnert?tab=repositories" class="info">GitHub Repos</a>
       </div>
     </div>
   </div>
@@ -218,23 +218,23 @@
 <!-- Contact Me Section -->
 <div class="cd-fixed-bg-end cd-bg-3">
   <div class="flex-container-contact">
-    <h1 class="contact-head" id="contact">Contact Me</h1>
+    <h1 id="contact" class="contact-head">Contact Me</h1>
     <div class="flex-item-contact">
       <h2 class="heading-contact hero-heading"><span class="my-name-contact">MAX EHNERT</span></h2>
     </div>
     <div class="flex-item-contact">
       <a target="_blank" href="mailto:max.ehnert@gmail.com?Subject=Hello%20I%20would%20like%20to%20talk%20about%20your%20experience">
-        <img src="images/mail.png" data-toggle="tooltip" data-placement="bottom" title="Email Me"></a>
-      <a target='_blank' href="https://github.com/maxehnert">
-        <img src="images/github3.png" data-toggle="tooltip" data-placement="bottom" title="My Repos"></a>
+        <img src="images/mail.png" alt="email link" data-toggle="tooltip" data-placement="bottom" title="Email Me"></a>
+      <a target="_blank" href="https://github.com/maxehnert">
+        <img src="images/github3.png" alt="github account link" data-toggle="tooltip" data-placement="bottom" title="My Repos"></a>
       <a target="_blank" href="https://www.linkedin.com/pub/max-ehnert/80/203/624">
-        <img src="images/linkedin.png" data-toggle="tooltip" data-placement="bottom" title="Let's Connect"></a>
+        <img src="images/linkedin.png" alt="linkedin account link" data-toggle="tooltip" data-placement="bottom" title="Let's Connect"></a>
       <a target="_blank"href="https://twitter.com/ehnertm">
-        <img src="images/twitter3.png" data-toggle="tooltip" data-placement="bottom" title="@ehnertm"></a>
+        <img src="images/twitter3.png" alt="twitter account link" data-toggle="tooltip" data-placement="bottom" title="@ehnertm"></a>
       <a target="_blank" href="https://www.dropbox.com/s/za5jbrp0q79sctp/MaxEhnert.pdf?dl=0" >
-        <img src="images/file3.png" data-toggle="tooltip" data-placement="bottom" title="My Resume"></a>
+        <img src="images/file3.png" alt="resume link" data-toggle="tooltip" data-placement="bottom" title="My Resume"></a>
     </div>
-    <div class="close-statement flex-item-contact ">
+    <div class="close-statement flex-item-contact">
       <p class="quote"></p>
     </div>
   </div>

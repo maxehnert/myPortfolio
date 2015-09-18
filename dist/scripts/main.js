@@ -1,26 +1,27 @@
-//tooltip function
+// Tooltip initialization function
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 });
 
-$('.burger').click(function(){
+// Click handler because it wasn't responding correctly with ad blockers for some reason.
+$('.js-burger').click( function() {
   return false;
 });
 
-//scrolls to targeted id
-$('body').scrollspy({ target: '.navbar-fixed-top' });
+// Scrolls to targeted id
+$('body').scrollspy( { target: '.navbar-fixed-top' } );
 
-//waypoint for animation
+// Waypoint for animation
 $('.cd-color-2').waypoint(function(direction) {
-  $('.img-skill').removeClass('imgnone');
-  $('.imgleft').addClass('animated bounceInLeft');
-  $('.imgcenter').addClass('animated bounceIn');
-  $('.imgright').addClass('animated bounceInRight');
+  $('.js-img-skill').removeClass('imgnone');
+  $('.js-imgleft').addClass('animated bounceInLeft');
+  $('.js-imgcenter').addClass('animated bounceIn');
+  $('.js-imgright').addClass('animated bounceInRight');
 }, {
   offset: '50%'
 });
 
-/* Github Profile Activity Widget*/
+// Github Profile Activity Widget
 Github.userActivity({
   username: "maxehnert",
   selector: ".github-user",
@@ -34,7 +35,7 @@ $('.navigation-link a').click(function() {
 });
 
 // Toggle the hamburger icon and display nav links
-$('.burger').click(function(){
+$('.js-burger').click(function(){
   $(this).toggleClass('open');
   $('.navigation-link-collapsed').toggleClass('navigation-link-collapsed-hide');
 });
@@ -42,7 +43,7 @@ $('.burger').click(function(){
 // Toggle nav links and hamburger after clicking on one
 $('.navigation-link-collapsed a').click(function() {
   $('.navigation-link-collapsed').toggleClass('navigation-link-collapsed-hide');
-  $('.burger').toggleClass('open');
+  $('.js-burger').toggleClass('open');
 });
 
 // Display a quote at the end of the Contact section

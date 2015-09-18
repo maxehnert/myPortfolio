@@ -135,7 +135,7 @@ body {
   padding: 0;
 }
 
-.navigation-link{
+.navigation-link {
   display: flex;
   -webkit-flex-flow: row wrap;
   justify-content: flex-end;
@@ -269,7 +269,7 @@ h2 span {
 }
 
 /* My Skills Section */
-.c-img {
+.skills-img-container {
   border-bottom: 4px solid HSLA(200,69%,54%,1);
   margin: 5px;
   padding-bottom: 10px;
@@ -281,7 +281,7 @@ h2 span {
     width: 100px;
   }
 
-  .imgnone{
+  .imgnone {
     opacity: 0;
   }
 }
@@ -335,7 +335,9 @@ h2 span {
     margin-top: 10px;
   }
 
-  p, a, span {
+  p,
+  a,
+  span {
     color: HSLA(0, 0%, 93%, 1);
     font-family: 'Titillium Web', sans-serif;
     font-size: 21px;
@@ -383,7 +385,7 @@ h2 span {
   border-bottom: 2px solid black;
 }
 
-.contact-container{
+.contact-container {
   text-align: center;
 }
 
@@ -560,7 +562,7 @@ h2 span {
     align-items: center;
   }
 
-  .navigation-link-collapsed{
+  .navigation-link-collapsed {
     display: flex;
     -webkit-flex-flow: column;
     justify-content: flex-start;

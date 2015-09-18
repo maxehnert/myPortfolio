@@ -4,6 +4,7 @@
     "node": ">=0.10.0"
   },
   "devDependencies": {
+    "browser-sync": "^2.9.3",
     "connect": "^2.29.1",
     "connect-livereload": "^0.4.1",
     "critical": "^0.5.6",
