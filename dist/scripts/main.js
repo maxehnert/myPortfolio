@@ -1,17 +1,25 @@
-// Tooltip initialization function
+/*
+ * Tooltip initialization function.
+*/
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 });
 
-// Click handler because it wasn't responding correctly with ad blockers for some reason.
+/*
+ * Click handler because it wasn't responding correctly with ad blockers for some reason.
+*/
 $('.js-burger').click( function() {
   return false;
 });
 
-// Scrolls to targeted id
+/*
+ * Scrolls to targeted id.
+*/
 $('body').scrollspy( { target: '.navbar-fixed-top' } );
 
-// Waypoint for animation
+/*
+ * Waypoint for animation.
+*/
 $('.cd-color-2').waypoint(function(direction) {
   $('.js-img-skill').removeClass('imgnone');
   $('.js-imgleft').addClass('animated bounceInLeft');
@@ -21,32 +29,68 @@ $('.cd-color-2').waypoint(function(direction) {
   offset: '50%'
 });
 
-// Github Profile Activity Widget
+/*
+ * Github Profile Activity Widget.
+*/
 Github.userActivity({
   username: "maxehnert",
   selector: ".github-user",
   limit: 20
 });
 
-// Display an active state for the selected nav link
-$('.navigation-link a').click(function() {
+/*
+ * Display an active state for the selected nav link.
+*/
+$('.navigation-link a').click( function() {
+
   $('.navigation-link a').removeClass('active-nav');
   $(this).addClass('active-nav');
+
+  overlay();
 });
 
-// Toggle the hamburger icon and display nav links
-$('.js-burger').click(function(){
+/*
+ * Toggle the hamburger icon and display nav links.
+*/
+$('.js-burger').click( function() {
+
   $(this).toggleClass('open');
   $('.navigation-link-collapsed').toggleClass('navigation-link-collapsed-hide');
+
+  overlay();
 });
 
-// Toggle nav links and hamburger after clicking on one
-$('.navigation-link-collapsed a').click(function() {
+/*
+ * Toggle nav links and hamburger after clicking on one.
+*/
+$('.navigation-link-collapsed a').click( function() {
+
   $('.navigation-link-collapsed').toggleClass('navigation-link-collapsed-hide');
   $('.js-burger').toggleClass('open');
 });
 
-// Display a quote at the end of the Contact section
+/*
+ * Show opaque overlay over the site when the mobile nav is open.
+*/
+function overlay() {
+
+  var bod = document.querySelector('body');
+
+  $('.overlay').toggleClass('overlay_flash');
+
+  // Only show the overlay if the mobile nav is open
+  if ( document.querySelector('.overlay').scrollHeight > 0 ||
+       document.querySelector('.navigation-link-collapsed-hide') ) {
+        $('.overlay_flash').css( 'height', '0px' );
+        $('.overlay').css( 'height', '0px' );
+  } else {
+    $('.overlay_flash').css( 'height', bod.scrollHeight + 'px' );
+  }
+};
+
+/*
+ * Display a quote at the end of the Contact section .
+*/
 function quoteLoop() {
   var quoteArray = [
       "Courage is going from failure to failure, and not losing enthusiasm. -Winston Churchill",
@@ -79,10 +123,3 @@ function quoteLoop() {
 };
 
 window.onload = quoteLoop();
-
-// $('.js-burger').click( function() {
-//   var bod = document.querySelector('body');
-// $('.overlay_flash').css('height', bod.scrollHeight + 'px' );
-//   $('.overlay').toggleClass('overlay_flash');
-//
-// });
