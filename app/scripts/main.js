@@ -79,3 +79,10 @@ function quoteLoop() {
 };
 
 window.onload = quoteLoop();
+
+// $('.js-burger').click( function() {
+//   var bod = document.querySelector('body');
+// $('.overlay_flash').css('height', bod.scrollHeight + 'px' );
+//   $('.overlay').toggleClass('overlay_flash');
+//
+// });

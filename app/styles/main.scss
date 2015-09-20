@@ -180,6 +180,31 @@ h2 span {
   position: relative;
 }
 
+.fa-links {
+  color: black;
+  font-size: 2.5em;
+}
+
+.fa-links:hover {
+  color: HSLA(200, 69%, 54%, 1);
+}
+
+.fa-file-text-o {
+  font-size: 2.3em;
+}
+
+// .overlay_flash {
+//   background-color: HSLA(0, 0%, 0%, 0.7);
+//   height: 100%;
+//   left: 0;
+//   opacity: 1;
+//   position: absolute;
+//   top: 0;
+//   overflow: visible;
+//   width: 100%;
+//   z-index: 2;
+// }
+
 .home-adjustment-container {
   padding-right: 10%;
   padding-top: 10%;
@@ -493,11 +518,13 @@ h2 span {
   	display: block;
   	height: 50px;
   	width: 50px;
-    background: transparent;
   }
 
-  .burger:hover {
-    background: HSLA(200, 69%, 54%, 1) !important;
+  // Change line color on hover
+  .burger:hover span,
+  .burger:hover span:before,
+  .burger:hover span:after {
+    background: HSLA(200, 69%, 54%, 1);
   }
 
   .burger span {
