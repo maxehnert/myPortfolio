@@ -100,7 +100,7 @@ body {
 
 /* Work Section */
 .cd-color-3 {
-  background-color: black;
+  background-color: HSLA(0, 0%, 16%, 1);
 }
 
 /* END Background Images and Colors */
@@ -270,6 +270,7 @@ h2 span {
 
   .gt-container {
     border: none;
+    box-shadow: 0 4px 4px HSLA(0, 0%, 63%, 1);
   }
 
   .user-name {
@@ -279,6 +280,10 @@ h2 span {
 
   .user-login {
     font-size: 1.8em;
+  }
+
+  .gt-usr-img {
+    box-shadow: 0 4px 4px HSLA(0, 0%, 63%, 1);
   }
 
   .gt-usr-details {
