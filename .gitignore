@@ -1,0 +1,11 @@
+node_modules
+.tmp
+.sass-cache
+bower_components
+test/bower_components
+.DS_Store
+._.DS_Store
+.idea/*
+.env
+app/images
+dist/images
