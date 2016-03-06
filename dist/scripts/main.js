@@ -2,8 +2,10 @@
  * Tooltip initialization function.
 */
 $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
+  //  $('[data-toggle="tooltip"]').tooltip()
+  // $('.qwe[rel=tipsy]').tipsy({fade: true, gravity: 'n'});
 });
+
 
 /*
  * Click handler because it wasn't responding correctly with ad blockers for some reason.
