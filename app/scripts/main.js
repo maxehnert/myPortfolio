@@ -1,13 +1,4 @@
 /*
- * Tooltip initialization function.
-*/
-$(function () {
-  //  $('[data-toggle="tooltip"]').tooltip()
-  // $('.qwe[rel=tipsy]').tipsy({fade: true, gravity: 'n'});
-});
-
-
-/*
  * Click handler because it wasn't responding correctly with ad blockers for some reason.
 */
 $('.js-burger').click( function() {
@@ -17,7 +8,7 @@ $('.js-burger').click( function() {
 /*
  * Scrolls to targeted id.
 */
-$('body').scrollspy( { target: '.navbar-fixed-top' } );
+// $('body').scrollspy( { target: '.navbar-fixed-top' } );
 
 /*
  * Waypoint for animation.
@@ -36,6 +27,7 @@ $('.cd-color-2').waypoint(function(direction) {
 */
 Github.userActivity({
   username: "maxehnert",
+  OAuth: 'f0856bc0ec459444238129a1a2bca2cf2e35b8f7',
   selector: ".github-user",
   limit: 20
 });
