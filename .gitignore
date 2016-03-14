@@ -8,4 +8,5 @@ test/bower_components
 .idea/*
 .env
 app/images
-dist/images
+dist
+build

@@ -5,16 +5,20 @@ const webpack = require('webpack');
 const pkg = require('./package.json');
 const Clean = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 ///////////////////////////////////////////////
 
-// var webpack = require('webpack');
-// var path = require("path");
 
 const PATHS = {
-  app: path.join(__dirname, 'app/scripts/main.js'),
-  build: path.join(__dirname, 'build')
+  app: path.join(__dirname, 'app/scripts/main'),
+  build: path.join(__dirname, './build')
 };
+
+const sassLoaders = [
+  'css-loader',
+  'sass-loader?indentedSyntax=sass&includePaths[]=' + path.resolve(__dirname, './app')
+];
 
 var node_dir = __dirname + '/node_modules';
 var bower_dir = __dirname + '/bower_components';
@@ -22,11 +26,12 @@ var bower_dir = __dirname + '/bower_components';
 var config = {
   resolve: {
     alias: {
-      jquery: bower_dir + '/jquery.min.js',
-      underscore: bower_dir + '/underscore.js',
-      looper: bower_dir + '/src/looper.min.js',
-      githubjs: bower_dir + '/dist/github.min.js'
-    }
+      jquery: bower_dir + '/jquery/jquery.min.js',
+      underscore: bower_dir + '/underscore/underscore.js',
+      looper: bower_dir + '/looper/src/looper.min.js',
+      githubjs: bower_dir + '/githubjs/dist/github.min.js'
+    },
+    extensions: ['', '.js', '.scss', '.sass']
   },
 
   entry: {
@@ -36,8 +41,13 @@ var config = {
 
   output: {
     path: PATHS.build,
-    filename: "/dist/js/[name].bundle.js"
+    filename: "[name].bundle.js",
+    publicPath: '/build'
   },
+
+  plugins: [
+    new ExtractTextPlugin('[name].css')
+  ],
 
   module: {
     loaders: [
@@ -51,7 +61,8 @@ var config = {
       },
       {
         test: /\.scss$/,
-        loaders: ["style", "css", "sass"]
+        // loaders: ["style", "css", "sass"]
+        loader: ExtractTextPlugin.extract('style-loader', sassLoaders.join('!'))
       },
       {
         test:   /\.(png|gif|jpe?g|svg)$/i,
@@ -62,7 +73,7 @@ var config = {
   }
 };
 
-
+module.exports = config;
 
 
 
