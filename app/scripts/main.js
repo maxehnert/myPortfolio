@@ -1,5 +1,8 @@
+require('../../bower_components/looper/src/looper.css');
+require('../../node_modules/githubjs/src/github.css');
 require('../styles/animate');
-require('../styles/main')
+require('../styles/main');
+var Github = require('../../bower_components/githubjs/dist/github.min.js');
 /*
  * Click handler because it wasn't responding correctly with ad blockers for some reason.
 */
@@ -15,18 +18,29 @@ $('.js-burger').click( function() {
 /*
  * Waypoint for animation.
 */
-$('.cd-color-2').waypoint(function(direction) {
-  $('.js-img-skill').removeClass('imgnone');
-  $('.js-imgleft').addClass('animated bounceInLeft');
-  $('.js-imgcenter').addClass('animated bounceIn');
-  $('.js-imgright').addClass('animated bounceInRight');
-}, {
+var waypoint = new Waypoint({
+  element: $('.cd-color-2'),
+  handler: function(direction) {
+    $('.js-img-skill').removeClass('imgnone');
+    $('.js-imgleft').addClass('animated bounceInLeft');
+    $('.js-imgcenter').addClass('animated bounceIn');
+    $('.js-imgright').addClass('animated bounceInRight');
+  },
   offset: '50%'
 });
+// $('.cd-color-2').waypoint(function(direction) {
+//   $('.js-img-skill').removeClass('imgnone');
+//   $('.js-imgleft').addClass('animated bounceInLeft');
+//   $('.js-imgcenter').addClass('animated bounceIn');
+//   $('.js-imgright').addClass('animated bounceInRight');
+// }, {
+//   offset: '50%'
+// });
 
 /*
  * Github Profile Activity Widget.
 */
+
 Github.userActivity({
   username: "maxehnert",
   OAuth: 'f0856bc0ec459444238129a1a2bca2cf2e35b8f7',

@@ -29,9 +29,10 @@ var config = {
       jquery: bower_dir + '/jquery/jquery.min.js',
       underscore: bower_dir + '/underscore/underscore.js',
       looper: bower_dir + '/looper/src/looper.min.js',
-      githubjs: bower_dir + '/githubjs/dist/github.min.js'
+      githubjs: bower_dir + '/githubjs/dist/github.min.js',
+      waypoint: bower_dir + '/waypoints/lib/jquery.waypoints.min.js'
     },
-    extensions: ['', '.js', '.scss', '.sass']
+    extensions: ['', '.js', '.css', '.scss', '.sass']
   },
 
   entry: {
@@ -41,8 +42,8 @@ var config = {
 
   output: {
     path: PATHS.build,
-    filename: "[name].bundle.js"
-    // publicPath: '/build'
+    filename: "[name].bundle.js",
+    publicPath: '/build'
   },
 
   plugins: [
@@ -61,14 +62,16 @@ var config = {
       },
       {
         test: /\.scss$/,
-        // loaders: ["style", "css", "sass"]
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+      },
+      {
+        test: /\.css$/,
         loader: ExtractTextPlugin.extract("style-loader", "css-loader")
       },
       {
         test:   /\.(png|gif|jpe?g|svg)$/i,
         loader: 'url?limit=10000',
-      },
-
+      }
     ]
   }
 };
