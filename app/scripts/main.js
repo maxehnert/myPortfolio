@@ -1,4 +1,5 @@
-
+require('../styles/animate');
+require('../styles/main')
 /*
  * Click handler because it wasn't responding correctly with ad blockers for some reason.
 */

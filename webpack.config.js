@@ -41,8 +41,8 @@ var config = {
 
   output: {
     path: PATHS.build,
-    filename: "[name].bundle.js",
-    publicPath: '/build'
+    filename: "[name].bundle.js"
+    // publicPath: '/build'
   },
 
   plugins: [
@@ -62,7 +62,7 @@ var config = {
       {
         test: /\.scss$/,
         // loaders: ["style", "css", "sass"]
-        loader: ExtractTextPlugin.extract('style-loader', sassLoaders.join('!'))
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader")
       },
       {
         test:   /\.(png|gif|jpe?g|svg)$/i,
