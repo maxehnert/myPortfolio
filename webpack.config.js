@@ -26,11 +26,11 @@ var bower_dir = __dirname + '/bower_components';
 var config = {
   resolve: {
     alias: {
-      jquery: bower_dir + '/jquery/jquery.min.js',
-      underscore: bower_dir + '/underscore/underscore.js',
+      // jquery: bower_dir + '/jquery/jquery.min.js',
+      // underscore: bower_dir + '/underscore/underscore.js',
       looper: bower_dir + '/looper/src/looper.min.js',
-      githubjs: bower_dir + '/githubjs/dist/github.min.js',
-      waypoint: bower_dir + '/waypoints/lib/jquery.waypoints.min.js'
+      githubjs: bower_dir + '/githubjs/dist/github.min.js'
+      // waypoint: bower_dir + '/waypoints/lib/jquery.waypoints.min.js'
     },
     extensions: ['', '.js', '.css', '.scss', '.sass']
   },
@@ -73,6 +73,11 @@ var config = {
         loader: 'url?limit=10000',
       }
     ]
+  },
+
+  externals: {
+    modernizr: 'modernizr',
+    jquery: "jQuery"
   }
 };
 
