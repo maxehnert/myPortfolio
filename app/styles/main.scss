@@ -231,9 +231,18 @@ h2 span {
   border-bottom: 2px solid white;
 }
 
+.looper {
+  width: 100%;
+  text-align: right;
+}
+
 .looper-content {
   font-size: 21px;
   font-weight: 200;
+}
+
+.item.animated p {
+  margin-top: 0;
 }
 
 /* About Me Section */
@@ -516,6 +525,10 @@ h2 span {
 
   .flex-h2-container h2 {
     margin-top: 0;
+  }
+
+  .looper {
+    text-align: center;
   }
 
   // Hamburger Icon
