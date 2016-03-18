@@ -1,8 +1,10 @@
+// require('../../node_modules/normalize.css/normalize.css');
 require('../../bower_components/looper/src/looper.css');
 require('../../node_modules/githubjs/src/github.css');
 require('../styles/animate.scss');
 require('../styles/main.scss');
 var Github = require('../../bower_components/githubjs/dist/github.min.js');
+
 /*
  * Click handler because it wasn't responding correctly with ad blockers for some reason.
 */
