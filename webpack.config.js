@@ -61,12 +61,12 @@ var config = {
         }
       },
       {
-        test: /\.scss$/,
+        test: /\.css$/,
         loader: ExtractTextPlugin.extract("style-loader", "css-loader")
       },
       {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract(['css','sass'])
       },
       {
         test:   /\.(png|gif|jpe?g|svg)$/i,
