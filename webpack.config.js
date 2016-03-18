@@ -66,7 +66,7 @@ var config = {
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract(['css','sass'])
+        loader: ExtractTextPlugin.extract('style', ['css','sass', 'postcss-loader'])
       },
       {
         test:   /\.(png|gif|jpe?g|svg)$/i,
@@ -74,6 +74,14 @@ var config = {
       }
     ]
   },
+
+  postcss: [
+    autoprefixer(
+      {
+        browsers: ['last 2 versions']
+      }
+    )
+  ],
 
   externals: {
     modernizr: 'modernizr',
