@@ -100,6 +100,63 @@ function overlay() {
   }
 };
 
+//////////////////////////
+//Implement my own scrollspy to undeline the links in the nav when you scroll to different sections
+
+var last_known_scroll_position = 0;
+var ticking = false;
+
+function scrollSpyFunction(scroll_pos) {
+  var topBody = document.getElementById('top');
+  var about = document.getElementById('about');
+  var skills = document.getElementById('skills');
+  var work = document.getElementById('work');
+  var contact = document.querySelector('.flex-container-contact');
+
+  var homeLink = document.querySelector('.home-link');
+  var aboutLink = document.querySelector('.about-link');
+  var skillsLink = document.querySelector('.skills-link');
+  var workLink = document.querySelector('.work-link');
+  var contactLink = document.querySelector('.contact-link');
+  var navLinks =  Array.from(document.querySelectorAll('.navigation-link a'));
+
+  function removeActiveClass() {
+    navLinks.forEach(function(e) {
+      if (e.classList.contains('active-nav')) {
+        e.classList.remove('active-nav');
+      }
+    });
+  }
+
+  if (scroll_pos < about.offsetTop) {
+    homeLink.classList.contains('active-nav') ? null : (removeActiveClass(), homeLink.classList.add('active-nav'));
+
+  } else if (scroll_pos < skills.offsetTop) {
+    aboutLink.classList.contains('active-nav') ? null : (removeActiveClass(), aboutLink.classList.add('active-nav'));
+
+  } else if (scroll_pos < work.offsetTop) {
+    skillsLink.classList.contains('active-nav') ? null : (removeActiveClass(), skillsLink.classList.add('active-nav'));
+
+  } else if (scroll_pos < contact.offsetTop) {
+    workLink.classList.contains('active-nav') ? null : (removeActiveClass(), workLink.classList.add('active-nav'));
+  } else if (scroll_pos >= contact.offsetTop) {
+    contactLink.classList.contains('active-nav') ? null : (removeActiveClass(), contactLink.classList.add('active-nav'));
+  }
+}
+
+window.addEventListener('scroll', function(e) {
+  last_known_scroll_position = window.scrollY;
+  if (!ticking) {
+    window.requestAnimationFrame(function() {
+      scrollSpyFunction(last_known_scroll_position);
+      ticking = false;
+    });
+  }
+  ticking = true;
+});
+
+//////////////////////////
+
 /*
  * Display a quote at the end of the Contact section .
 */
