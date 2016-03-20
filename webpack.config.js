@@ -41,7 +41,7 @@ var config = {
   output: {
     path: PATHS.build,
     filename: "[name].bundle.js",
-    publicPath: '/build'
+    publicPath: 'myPortfolio/build'
   },
 
   plugins: [

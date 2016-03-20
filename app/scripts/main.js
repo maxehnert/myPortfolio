@@ -13,11 +13,6 @@ $('.js-burger').click( function() {
 });
 
 /*
- * Scrolls to targeted id.
-*/
-// $('body').scrollspy( { target: '.navbar-fixed-top' } );
-
-/*
  * Waypoint for animation.
 */
 var waypoint = new Waypoint({
@@ -30,14 +25,6 @@ var waypoint = new Waypoint({
   },
   offset: '50%'
 });
-// $('.cd-color-2').waypoint(function(direction) {
-//   $('.js-img-skill').removeClass('imgnone');
-//   $('.js-imgleft').addClass('animated bounceInLeft');
-//   $('.js-imgcenter').addClass('animated bounceIn');
-//   $('.js-imgright').addClass('animated bounceInRight');
-// }, {
-//   offset: '50%'
-// });
 
 /*
  * Github Profile Activity Widget.
@@ -100,9 +87,10 @@ function overlay() {
   }
 };
 
-//////////////////////////
-//Implement my own scrollspy to undeline the links in the nav when you scroll to different sections
 
+/*
+ * Scrolls to targeted id.
+*/
 var last_known_scroll_position = 0;
 var ticking = false;
 
@@ -154,8 +142,6 @@ window.addEventListener('scroll', function(e) {
   }
   ticking = true;
 });
-
-//////////////////////////
 
 /*
  * Display a quote at the end of the Contact section .
