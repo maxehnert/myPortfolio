@@ -16,6 +16,10 @@ body {
   position: relative;
 }
 
+.hide-content {
+  display: none;
+}
+
 .row {
   margin-left: 0;
   margin-right: 0;
@@ -323,6 +327,7 @@ h2 span {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  position: relative;
 }
 
 .new-skill-item {
@@ -339,14 +344,19 @@ h2 span {
 }
 
 .skill-desc {
-  display: none;
-  background: red;
+  background: black;
+  color: white;
+  font-size: 30px;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   position: absolute;
   opacity: 0.8;
+  transition-property: height;
+  transition-duration: 2s;
+  transition-timing-function: ease;
+  height: 100%;
 }
 
 /*

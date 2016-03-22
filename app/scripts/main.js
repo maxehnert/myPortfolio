@@ -7,24 +7,47 @@ var Github = require('../../bower_components/githubjs/dist/github.min.js');
 
 /*
 *  When you hover over a skills icon it should make the other row disapear behind a cover div with text relating to that icon.
-
-var newSkillsContainers = document.querySelectorAll('.new-skills-container-js');
-newSkillsContainers
+*/
 
 var newSkillItems = document.querySelectorAll('.new-skill-item-js');
 
 const showShit = () => {
-  make the other container show the overlay and put your text in therrrr.
+
+  const skillsTextObj = {
+    backbone: 'I have experience developing a large tv streaming service application built on Backbone and Marionette. I am responsible for not only maintaining the current application but also continuing to develop new features.',
+
+    angular: 'I have built many applications of my own using Angular 1.X and have experience building Angular applications professionally utilizing the ionic framework.',
+
+    react: 'React combined with Redux is something I began developing on last year and find it very fulfilling. Although I have only built personal applications using this stack I throughly enjoy working within this context and in a functional programming paradigm.',
+
+    webpack: 'All of the applications I build using React are built using the latest ES6/ES7 features as well as Webpack. I replaced Gulp with Webpack as the build tool for this site which I found much more challenging since I do not use a front end framework.',
+
+    node: 'On the server side I enjoy writing nodejs and have built APIs using node with express and hapi. I also have experience writing scripts with node and communicating with third party APIs.',
+
+    css: 'Writing clean css and markup is something I take pride in as css files in large projects tend to turn into messes. I enjoy trying new techniques using transforms and animations to get interesting effects.'
+  };
+
+  const targetAttribute = event.target.dataset.skill;
+
+  // let skillDesc = event.target.parentNode.nextElementSibling.lastElementChild;
+
+  // Figure out which row you're on and select the opposite overlay el
+  let skillDesc = event.target.parentNode.nextElementSibling ?
+    document.querySelector('.skill-desc-2') :
+    document.querySelector('.skill-desc-1');
+
+  skillDesc.innerHTML = skillsTextObj[targetAttribute];
+  skillDesc.classList.toggle('hide-content');
+
 }
-Array.from(newSkillItems, el => el.addEventListener('hover', showShit, false));
 
-iconEl.addEventListener(hover, fnDoShit)
+// Add mouseenter and mouseleave event listeners to all skill-icon containers
+Array.from(newSkillItems, el =>  (
+  el.addEventListener('mouseenter', showShit, false),
+  el.addEventListener('mouseleave', showShit, false)
+));
 
-function fndoShit() {
 
-iconEl.parentNode.sibling.overlayContainer toggleClass(visibile) && insertAdjacentHTML(the string of shit I wrote)
-}
-*/
 
 /*
  * Click handler because it wasn't responding correctly with ad blockers for some reason.
