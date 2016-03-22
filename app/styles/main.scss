@@ -313,6 +313,43 @@ h2 span {
 }
 
 /* My Skills Section */
+
+.new-skills {
+  display: flex;
+  flex-direction: column;
+}
+.new-skills-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.new-skill-item {
+  padding: 1px;
+
+  img {
+    transform: scale(0.75);
+  }
+}
+
+.new-skill-item:hover{
+  border: 1px solid white;
+  padding: 0;
+}
+
+.skill-desc {
+  display: none;
+  background: red;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  opacity: 0.8;
+}
+
+/*
 .skills-img-container {
   border-bottom: 4px solid HSLA(200,69%,54%,1);
   margin: 5px;
@@ -352,6 +389,8 @@ h2 span {
   justify-content: center;
   display: flex;
 }
+
+*/
 
 /* MY PROJECTS Section */
 .flex-container-work {

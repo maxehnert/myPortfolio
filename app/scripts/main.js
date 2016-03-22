@@ -6,6 +6,27 @@ require('../styles/main.scss');
 var Github = require('../../bower_components/githubjs/dist/github.min.js');
 
 /*
+*  When you hover over a skills icon it should make the other row disapear behind a cover div with text relating to that icon.
+
+var newSkillsContainers = document.querySelectorAll('.new-skills-container-js');
+newSkillsContainers
+
+var newSkillItems = document.querySelectorAll('.new-skill-item-js');
+
+const showShit = () => {
+  make the other container show the overlay and put your text in therrrr.
+}
+Array.from(newSkillItems, el => el.addEventListener('hover', showShit, false));
+
+iconEl.addEventListener(hover, fnDoShit)
+
+function fndoShit() {
+
+iconEl.parentNode.sibling.overlayContainer toggleClass(visibile) && insertAdjacentHTML(the string of shit I wrote)
+}
+*/
+
+/*
  * Click handler because it wasn't responding correctly with ad blockers for some reason.
 */
 $('.js-burger').click( function() {
@@ -30,12 +51,12 @@ var waypoint = new Waypoint({
  * Github Profile Activity Widget.
 */
 
-Github.userActivity({
-  username: "maxehnert",
-  OAuth: 'f0856bc0ec459444238129a1a2bca2cf2e35b8f7',
-  selector: ".github-user",
-  limit: 20
-});
+// Github.userActivity({
+//   username: "maxehnert",
+//   OAuth: 'f0856bc0ec459444238129a1a2bca2cf2e35b8f7',
+//   selector: ".github-user",
+//   limit: 20
+// });
 
 /*
  * Display an active state for the selected nav link.
