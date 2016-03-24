@@ -29,8 +29,6 @@ const showShit = () => {
 
   const targetAttribute = event.target.dataset.skill;
 
-  // let skillDesc = event.target.parentNode.nextElementSibling.lastElementChild;
-
   // Figure out which row you're on and select the opposite overlay el
   let skillDesc = event.target.parentNode.nextElementSibling ?
     document.querySelector('.skill-desc-2') :
