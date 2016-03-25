@@ -354,9 +354,8 @@ h2 span {
   position: absolute;
   opacity: 0.8;
 
-  transition: max-height 2s ease-in-out;
   max-height: 0;
-
+  height: 0;
   overflow: hidden;
   transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);

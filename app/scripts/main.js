@@ -1,7 +1,6 @@
 // require('../../node_modules/normalize.css/normalize.css');
 require('../../bower_components/looper/src/looper.css');
 require('../../node_modules/githubjs/src/github.css');
-require('../styles/animate.scss');
 require('../styles/main.scss');
 var Github = require('../../bower_components/githubjs/dist/github.min.js');
 
@@ -34,7 +33,6 @@ const showShit = () => {
   //   document.querySelector('.skill-desc-1') :
   //   document.querySelector('.skill-desc-2');
   let skillDesc = event.target.parentNode.lastElementChild;
-// console.log(skillDesc.className);
 
   skillDesc.firstElementChild.innerHTML = skillDesc.classList.contains('skill-desc-active-js') ? '' : skillsTextObj[targetAttribute];
 
@@ -56,20 +54,6 @@ Array.from(newSkillItems, el =>  (
 */
 $('.js-burger').click( function() {
   return false;
-});
-
-/*
- * Waypoint for animation.
-*/
-var waypoint = new Waypoint({
-  element: $('.cd-color-2'),
-  handler: function(direction) {
-    $('.js-img-skill').removeClass('imgnone');
-    $('.js-imgleft').addClass('animated bounceInLeft');
-    $('.js-imgcenter').addClass('animated bounceIn');
-    $('.js-imgright').addClass('animated bounceInRight');
-  },
-  offset: '50%'
 });
 
 /*
