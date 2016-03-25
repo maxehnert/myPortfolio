@@ -30,12 +30,16 @@ const showShit = () => {
   const targetAttribute = event.target.dataset.skill;
 
   // Figure out which row you're on and select the opposite overlay el
-  let skillDesc = event.target.parentNode.nextElementSibling ?
-    document.querySelector('.skill-desc-2') :
-    document.querySelector('.skill-desc-1');
+  // let skillDesc = event.target.parentNode.nextElementSibling ?
+  //   document.querySelector('.skill-desc-1') :
+  //   document.querySelector('.skill-desc-2');
+  let skillDesc = event.target.parentNode.lastElementChild;
+// console.log(skillDesc.className);
 
-  skillDesc.innerHTML = skillsTextObj[targetAttribute];
-  skillDesc.classList.toggle('hide-content');
+  skillDesc.firstElementChild.innerHTML = skillDesc.classList.contains('skill-desc-active-js') ? '' : skillsTextObj[targetAttribute];
+
+
+  skillDesc.classList.toggle('skill-desc-active-js');
 
 }
 

@@ -16,10 +16,6 @@ body {
   position: relative;
 }
 
-.hide-content {
-  display: none;
-}
-
 .row {
   margin-left: 0;
   margin-right: 0;
@@ -338,24 +334,57 @@ h2 span {
   }
 }
 
-.new-skill-item:hover{
+.new-skill-item:hover {
   border: 1px solid white;
   padding: 0;
 }
 
 .skill-desc {
-  background: black;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  background-image: linear-gradient(HSLA(300, 1%, 37%, 1), black);
   color: white;
   font-size: 30px;
-  top: 0;
+
   left: 0;
   bottom: 0;
   right: 0;
   position: absolute;
   opacity: 0.8;
-  transition-property: height;
-  transition-duration: 2s;
-  transition-timing-function: ease;
+
+  transition: max-height 2s ease-in-out;
+  max-height: 0;
+
+  overflow: hidden;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.skill-desc-1 {
+  background-image: linear-gradient(HSLA(300, 1%, 37%, 1), black);
+
+  transform: translateY(94%);
+  z-index: 2;
+}
+
+.skill-desc-2 {
+  background-image: linear-gradient(HSLA(300, 1%, 37%, 1) ,black 50%, HSLA(300, 1%, 37%, 1));
+
+  top: 0;
+  transform: translateY(-100%);
+}
+
+.skill-desc-active-js {
+  // max-height: 500px;
+  // transition: max-height 2s ease-in-out;
+
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+  max-height: 1000px;
+  overflow: hidden;
+
   height: 100%;
 }
 
