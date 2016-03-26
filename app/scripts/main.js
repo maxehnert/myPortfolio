@@ -69,25 +69,43 @@ $('.js-burger').click( function() {
 
 /*
  * Display an active state for the selected nav link.
+ * I THINK THIS IS NOT NEEDED ANYMORE
 */
-$('.navigation-link a').click( function() {
+// $('.navigation-link a').click( function() {
+//
+//   $('.navigation-link a').removeClass('active-nav');
+//   $(this).addClass('active-nav');
+//
+//   overlay();
+// });
 
-  $('.navigation-link a').removeClass('active-nav');
-  $(this).addClass('active-nav');
-
+const addActiveClass = () => {
+  navLink.classList.remove('active-nav');
+  event.target.classList.add('active-nav');
   overlay();
-});
+}
+const navLink = document.querySelector('.navigation-link a');
+Array.from(navLink, el => el.addEventListener('click', addActiveClass, false));
 
 /*
  * Toggle the hamburger icon and display nav links.
 */
-$('.js-burger').click( function() {
+// $('.js-burger').click( function() {
+//
+//   $(this).toggleClass('open');
+//   $('.navigation-link-collapsed').toggleClass('navigation-link-collapsed-hide');
+//
+//   overlay();
+// });
 
-  $(this).toggleClass('open');
-  $('.navigation-link-collapsed').toggleClass('navigation-link-collapsed-hide');
-
+const toggleBurger = () => {
+  event.target.classList.toggle('open');
+  var qqq = document.querySelector('.navigation-link-collapsed');
+  qqq.classList.toggle('navigation-link-collapsed-hide');
   overlay();
-});
+};
+const jsBurger = document.querySelector('.js-burger');
+Array.from([jsBurger], el => el.addEventListener('click', toggleBurger, false));
 
 /*
  * Toggle nav links and hamburger after clicking on one.
