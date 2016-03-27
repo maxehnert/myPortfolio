@@ -110,11 +110,21 @@ Array.from([jsBurger], el => el.addEventListener('click', toggleBurger, false));
 /*
  * Toggle nav links and hamburger after clicking on one.
 */
-$('.navigation-link-collapsed a').click( function() {
+// $('.navigation-link-collapsed a').click( function() {
+//
+//   $('.navigation-link-collapsed').toggleClass('navigation-link-collapsed-hide');
+//   $('.js-burger').toggleClass('open');
+//   overlay();
+// });
 
-  $('.navigation-link-collapsed').toggleClass('navigation-link-collapsed-hide');
-  $('.js-burger').toggleClass('open');
-});
+const toggleNavCollapse = () => {
+  document.querySelector('.navigation-link-collapsed').classList.toggle('navigation-link-collapsed-hide');
+  document.querySelector('.js-burger').classList.toggle('open');
+  overlay();
+};
+const navLinkCollapsed = document.querySelector('.navigation-link-collapsed a');
+Array.from([navLinkCollapsed], el => el.addEventListener('click'), toggleNavCollapse, false);
+
 
 /*
  * Show opaque overlay over the site when the mobile nav is open.
