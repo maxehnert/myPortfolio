@@ -52,9 +52,9 @@ Array.from(newSkillItems, el =>  (
 /*
  * Click handler because it wasn't responding correctly with ad blockers for some reason.
 */
-$('.js-burger').click( function() {
-  return false;
-});
+// $('.js-burger').click( function() {
+//   return false;
+// });
 
 /*
  * Github Profile Activity Widget.
@@ -79,13 +79,13 @@ $('.js-burger').click( function() {
 //   overlay();
 // });
 
-const addActiveClass = () => {
-  navLink.classList.remove('active-nav');
-  event.target.classList.add('active-nav');
-  overlay();
-}
-const navLink = document.querySelector('.navigation-link a');
-Array.from(navLink, el => el.addEventListener('click', addActiveClass, false));
+// const addActiveClass = () => {
+//   navLink.classList.remove('active-nav');
+//   event.target.classList.add('active-nav');
+//   overlay();
+// }
+// const navLink = document.querySelector('.navigation-link a');
+// Array.from(navLink, el => el.addEventListener('click', addActiveClass, false));
 
 /*
  * Toggle the hamburger icon and display nav links.
@@ -99,7 +99,7 @@ Array.from(navLink, el => el.addEventListener('click', addActiveClass, false));
 // });
 
 const toggleBurger = () => {
-  event.target.classList.toggle('open');
+  jsBurger.classList.toggle('open');
   var qqq = document.querySelector('.navigation-link-collapsed');
   qqq.classList.toggle('navigation-link-collapsed-hide');
   overlay();
@@ -110,20 +110,20 @@ Array.from([jsBurger], el => el.addEventListener('click', toggleBurger, false));
 /*
  * Toggle nav links and hamburger after clicking on one.
 */
-// $('.navigation-link-collapsed a').click( function() {
-//
-//   $('.navigation-link-collapsed').toggleClass('navigation-link-collapsed-hide');
-//   $('.js-burger').toggleClass('open');
-//   overlay();
-// });
+$('.navigation-link-collapsed a').click( function() {
 
-const toggleNavCollapse = () => {
-  document.querySelector('.navigation-link-collapsed').classList.toggle('navigation-link-collapsed-hide');
-  document.querySelector('.js-burger').classList.toggle('open');
+  $('.navigation-link-collapsed').toggleClass('navigation-link-collapsed-hide');
+  $('.js-burger').toggleClass('open');
   overlay();
-};
-const navLinkCollapsed = document.querySelector('.navigation-link-collapsed a');
-Array.from([navLinkCollapsed], el => el.addEventListener('click'), toggleNavCollapse, false);
+});
+
+// const toggleNavCollapse = () => {
+//   document.querySelector('.navigation-link-collapsed').classList.toggle('navigation-link-collapsed-hide');
+//   document.querySelector('.js-burger').classList.toggle('open');
+//   overlay();
+// };
+// const navLinkCollapsed = document.querySelector('.navigation-link-collapsed a');
+// Array.from([navLinkCollapsed], el => el.addEventListener('click'), toggleNavCollapse, false);
 
 
 /*
