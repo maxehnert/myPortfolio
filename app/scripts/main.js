@@ -47,15 +47,6 @@ Array.from(newSkillItems, el =>  (
   el.addEventListener('mouseleave', showShit, false)
 ));
 
-
-
-/*
- * Click handler because it wasn't responding correctly with ad blockers for some reason.
-*/
-// $('.js-burger').click( function() {
-//   return false;
-// });
-
 /*
  * Github Profile Activity Widget.
 */
@@ -67,84 +58,47 @@ Array.from(newSkillItems, el =>  (
 //   limit: 20
 // });
 
-/*
- * Display an active state for the selected nav link.
- * I THINK THIS IS NOT NEEDED ANYMORE
-*/
-// $('.navigation-link a').click( function() {
-//
-//   $('.navigation-link a').removeClass('active-nav');
-//   $(this).addClass('active-nav');
-//
-//   overlay();
-// });
-
-// const addActiveClass = () => {
-//   navLink.classList.remove('active-nav');
-//   event.target.classList.add('active-nav');
-//   overlay();
-// }
-// const navLink = document.querySelector('.navigation-link a');
-// Array.from(navLink, el => el.addEventListener('click', addActiveClass, false));
+const navLinkCollapsed = document.querySelector('.navigation-link-collapsed');
+const jsBurger = document.querySelector('.js-burger');
+const navLinkCollapsedA = document.querySelectorAll('.navigation-link-collapsed a');
 
 /*
  * Toggle the hamburger icon and display nav links.
 */
-// $('.js-burger').click( function() {
-//
-//   $(this).toggleClass('open');
-//   $('.navigation-link-collapsed').toggleClass('navigation-link-collapsed-hide');
-//
-//   overlay();
-// });
-
 const toggleBurger = () => {
   jsBurger.classList.toggle('open');
   navLinkCollapsed.classList.toggle('navigation-link-collapsed-hide');
   overlay();
 };
-const navLinkCollapsed = document.querySelector('.navigation-link-collapsed');
-const jsBurger = document.querySelector('.js-burger');
 Array.from([jsBurger], el => el.addEventListener('click', toggleBurger, false));
 
 /*
  * Toggle nav links and hamburger after clicking on one.
 */
-// $('.navigation-link-collapsed a').click( function() {
-//
-//   $('.navigation-link-collapsed').toggleClass('navigation-link-collapsed-hide');
-//   $('.js-burger').toggleClass('open');
-//   overlay();
-// });
-
 const toggleNavCollapse = () => {
-  console.log('any of this shit runn?');
   navLinkCollapsed.classList.toggle('navigation-link-collapsed-hide');
   jsBurger.classList.toggle('open');
   overlay();
 };
-const navLinkCollapsedA = document.querySelectorAll('.navigation-link-collapsed a');
 Array.from(navLinkCollapsedA, el => el.addEventListener('click', toggleNavCollapse, false));
-
 
 /*
  * Show opaque overlay over the site when the mobile nav is open.
 */
-function overlay() {
+const overlay = () => {
+  let bod = document.getElementById('top');
+  let overlay = document.querySelector('.overlay');
 
-  var bod = document.querySelector('body');
-
-  $('.overlay').toggleClass('overlay_flash');
+  overlay.classList.toggle('overlay_flash');
 
   // Only show the overlay if the mobile nav is open
-  if ( document.querySelector('.overlay').scrollHeight > 0 ||
+  if ( overlay.scrollHeight > 0 ||
        document.querySelector('.navigation-link-collapsed-hide') ) {
-        $('.overlay_flash').css( 'height', '0px' );
-        $('.overlay').css( 'height', '0px' );
+         overlay.style.height = '0px';
   } else {
-    $('.overlay_flash').css( 'height', bod.scrollHeight + 'px' );
+    document.querySelector('.overlay_flash').style.height = bod.scrollHeight + 'px';
   }
-};
+}
 
 
 /*
@@ -205,8 +159,8 @@ window.addEventListener('scroll', function(e) {
 /*
  * Display a quote at the end of the Contact section .
 */
-function quoteLoop() {
-  var quoteArray = [
+const quoteLoop = () => {
+  const quoteArray = [
       "Courage is going from failure to failure, and not losing enthusiasm. -Winston Churchill",
 
       "Do not go where the path may lead, go instead where there is no path and leave a trail. -Ralph Waldo Emerson",
@@ -230,10 +184,9 @@ function quoteLoop() {
       "The unexamined life is not worth living. -socrates"
   ];
 
-  var val = Math.floor( Math.random() * 12 );
+  let val = Math.floor( Math.random() * 12 );
 
-  $('.quote').text(quoteArray[val]);
-
+  document.querySelector('.quote').textContent = quoteArray[val];
 };
 
 window.onload = quoteLoop();
