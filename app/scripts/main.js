@@ -100,30 +100,31 @@ Array.from(newSkillItems, el =>  (
 
 const toggleBurger = () => {
   jsBurger.classList.toggle('open');
-  var qqq = document.querySelector('.navigation-link-collapsed');
-  qqq.classList.toggle('navigation-link-collapsed-hide');
+  navLinkCollapsed.classList.toggle('navigation-link-collapsed-hide');
   overlay();
 };
+const navLinkCollapsed = document.querySelector('.navigation-link-collapsed');
 const jsBurger = document.querySelector('.js-burger');
 Array.from([jsBurger], el => el.addEventListener('click', toggleBurger, false));
 
 /*
  * Toggle nav links and hamburger after clicking on one.
 */
-$('.navigation-link-collapsed a').click( function() {
-
-  $('.navigation-link-collapsed').toggleClass('navigation-link-collapsed-hide');
-  $('.js-burger').toggleClass('open');
-  overlay();
-});
-
-// const toggleNavCollapse = () => {
-//   document.querySelector('.navigation-link-collapsed').classList.toggle('navigation-link-collapsed-hide');
-//   document.querySelector('.js-burger').classList.toggle('open');
+// $('.navigation-link-collapsed a').click( function() {
+//
+//   $('.navigation-link-collapsed').toggleClass('navigation-link-collapsed-hide');
+//   $('.js-burger').toggleClass('open');
 //   overlay();
-// };
-// const navLinkCollapsed = document.querySelector('.navigation-link-collapsed a');
-// Array.from([navLinkCollapsed], el => el.addEventListener('click'), toggleNavCollapse, false);
+// });
+
+const toggleNavCollapse = () => {
+  console.log('any of this shit runn?');
+  navLinkCollapsed.classList.toggle('navigation-link-collapsed-hide');
+  jsBurger.classList.toggle('open');
+  overlay();
+};
+const navLinkCollapsedA = document.querySelectorAll('.navigation-link-collapsed a');
+Array.from(navLinkCollapsedA, el => el.addEventListener('click', toggleNavCollapse, false));
 
 
 /*
