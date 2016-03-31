@@ -347,6 +347,7 @@ h2 span {
 }
 
 .new-skill-item img {
+  cursor: pointer;
   transform: scale(0.75);
 }
 
@@ -354,6 +355,10 @@ h2 span {
 .node-logo {
   background: rgba(0, 0, 0, 0.66);
   clip-path: polygon(99% 26%, 99% 74%, 50% 100%, 1% 75%, 1% 25%, 50% 0%);
+}
+
+.react-logo {
+  transform: scale(1);
 }
 
 .skill-desc {
