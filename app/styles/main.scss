@@ -346,20 +346,9 @@ h2 span {
   position: relative;
 }
 
-.new-skill-item {
-  // padding: 1px;
-
-  img {
-    transform: scale(0.75);
-  }
+.new-skill-item img {
+  transform: scale(0.75);
 }
-
-/*
-.new-skill-item:hover {
-  border: 1px solid white;
-  padding: 0;
-}
-*/
 
 .skill-desc {
   display: flex;
@@ -385,9 +374,7 @@ background: black;
 
 .skill-desc-1 {
   // background-image: linear-gradient(HSLA(300, 1%, 37%, 1), black);
-
-  transform: translateY(94%);
-
+  transform: translateY(100%);
 }
 
 .skill-desc-2 {
@@ -405,52 +392,9 @@ background: black;
   transition-timing-function: ease-in;
   max-height: 1000px;
   overflow: hidden;
-z-index: 2;
+  z-index: 2;
   height: 100%;
 }
-
-/*
-.skills-img-container {
-  border-bottom: 4px solid HSLA(200,69%,54%,1);
-  margin: 5px;
-  padding-bottom: 10px;
-  text-align: center;
-
-  .img-skill {
-    height: 100px;
-    padding: 5px;
-    width: 100px;
-  }
-
-  .imgnone {
-    opacity: 0;
-  }
-}
-
-.skills-p {
-  font-size: 20px;
-  padding: 5px;
-  text-align: center;
-}
-
-.flex-container-skills {
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: row;
-  margin: 0 10px;
-}
-
-.flex-item-skills-category {
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.flex-skills-icons {
-  justify-content: center;
-  display: flex;
-}
-
-*/
 
 /* MY PROJECTS Section */
 .flex-container-work {
@@ -712,6 +656,10 @@ z-index: 2;
   // Change Navigation Layout for Mobile
   .navigation {
     -webkit-flex-flow: column;
+
+    &.navigation-expand {
+      height: 100%;
+    }
   }
 
   .navigation-title {
@@ -741,7 +689,7 @@ z-index: 2;
 }
 
 
-//////////TOOL TIP////////////////////
+/*/////////TOOL TIP///////////////////*/
 
 [class^="tooltip"] {
   position: relative;
