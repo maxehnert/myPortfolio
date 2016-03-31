@@ -7,6 +7,5 @@ test/bower_components
 ._.DS_Store
 .idea/*
 .env
-app/images
 dist
 build
