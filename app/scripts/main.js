@@ -8,7 +8,7 @@ var Github = require('../../bower_components/githubjs/dist/github.min.js');
  * When you hover over a skills icon it should make the other row disapear behind a cover div with text relating to that icon.
 */
 
-var newSkillItems = document.querySelectorAll('.new-skill-item-js');
+var newSkillItems = document.querySelectorAll('.new-skill-item-js img');
 
 const showShit = () => {
 
@@ -26,9 +26,9 @@ const showShit = () => {
     css: 'Writing clean css and markup is something I take pride in as css files in large projects tend to turn into messes. I enjoy trying new techniques using transforms and animations to get interesting effects.'
   };
 
-  const targetAttribute = event.target.dataset.skill;
+  const targetAttribute = event.target.parentElement.dataset.skill;
 
-  let skillDesc = event.target.parentNode.lastElementChild;
+  let skillDesc = event.target.parentElement.parentElement.lastElementChild;
 
   skillDesc.firstElementChild.innerHTML = skillDesc.classList.contains('skill-desc-active-js') ? '' : skillsTextObj[targetAttribute];
 
