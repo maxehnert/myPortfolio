@@ -350,6 +350,12 @@ h2 span {
   transform: scale(0.75);
 }
 
+// Added a semi-transparent background and clipped it into a hexagon to match the logo outline
+.node-logo {
+  background: rgba(0, 0, 0, 0.66);
+  clip-path: polygon(99% 26%, 99% 74%, 50% 100%, 1% 75%, 1% 25%, 50% 0%);
+}
+
 .skill-desc {
   display: flex;
   align-items: center;
@@ -392,6 +398,7 @@ background: black;
   transition-timing-function: ease-in;
   max-height: 1000px;
   overflow: hidden;
+  padding: 0 1px;
   z-index: 2;
   height: 100%;
 }
