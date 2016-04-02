@@ -23,7 +23,7 @@ const showShit = () => {
 
     node: 'On the server side I enjoy writing nodejs and have built APIs using node with express and hapi. I also have experience writing scripts with node and communicating with third party APIs.',
 
-    css: 'Writing clean css and markup is something I take pride in as css files in large projects tend to turn into messes. I enjoy trying new techniques using transforms and animations to get interesting effects. In fact, the css logo you see here, I made using pure css selectors. The background of this section are several skewed elements with partial opaque colors.'
+    css: 'Writing clean css and markup is something I take pride in as css files in large projects tend to turn into messes. I enjoy trying new techniques using transforms and animations to get interesting effects. In fact, the css logo you see here, I made using pure css selectors on a single element.'
   };
 
   const targetAttribute = event.target.parentElement.dataset.skill;
@@ -46,12 +46,12 @@ Array.from(newSkillItems, el =>  (
 /**
  * Github Profile Activity Widget.
 */
-Github.userActivity({
-  username: "maxehnert",
-  OAuth: 'f0856bc0ec459444238129a1a2bca2cf2e35b8f7',
-  selector: ".github-user",
-  limit: 20
-});
+// Github.userActivity({
+//   username: "maxehnert",
+//   OAuth: 'f0856bc0ec459444238129a1a2bca2cf2e35b8f7',
+//   selector: ".github-user",
+//   limit: 20
+// });
 
 /**
  * Define a few variables that are frequently used so I don't have to do a query each time

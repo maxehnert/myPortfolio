@@ -456,7 +456,7 @@ h2 span {
   right: 25px;
   left: 25px;
   background: white;
-  clip-path: polygon(100% 0%, 90% 88%, 50% 100%, 14% 89%, 10% 60%,25% 60%,28% 80%,50% 87%,75% 79%,77% 54%,28% 54%,26% 39%,79% 39%,81% 15%,2% 15%, 0% 0%);
+  clip-path: polygon(100% 0%, 90% 88%, 50% 100%, 14% 89%, 10% 60%, 25% 60%, 28% 80%, 50% 87%, 75% 79%, 77% 54%, 28% 54%, 26% 39%, 79% 39%, 81% 15%, 2% 15%, 0% 0%);
 }
 
 .skill-shape-1,
@@ -510,7 +510,7 @@ h2 span {
   .img-container {
     flex: auto;
     margin: 5px 10px;
-    max-width: 750px;
+    max-width: 755px;
   }
 }
 
@@ -552,8 +552,6 @@ h2 span {
 
 .img-responsive {
   border: 1px solid white;
-   height: auto;
-   width: 100%;
 }
 
 /* Contact Me Section */
@@ -647,6 +645,11 @@ h2 span {
   .cd-fixed-bg-end.cd-bg-3 {
     background-color: HSLA(203, 23%, 64%, 1);
     background-image: none;
+  }
+
+  .img-responsive {
+    height: auto;
+    width: 100%;
   }
 
   .close-statement p {
