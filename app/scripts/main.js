@@ -8,7 +8,7 @@ var Github = require('../../bower_components/githubjs/dist/github.min.js');
  * When you hover over a skills icon it should make the other row disapear behind a cover div with text relating to that icon.
 */
 
-var newSkillItems = document.querySelectorAll('.new-skill-item-js img');
+var newSkillItems = document.querySelectorAll('.new-skill-item-js');
 
 const showShit = () => {
 
@@ -23,7 +23,7 @@ const showShit = () => {
 
     node: 'On the server side I enjoy writing nodejs and have built APIs using node with express and hapi. I also have experience writing scripts with node and communicating with third party APIs.',
 
-    css: 'Writing clean css and markup is something I take pride in as css files in large projects tend to turn into messes. I enjoy trying new techniques using transforms and animations to get interesting effects.'
+    css: 'Writing clean css and markup is something I take pride in as css files in large projects tend to turn into messes. I enjoy trying new techniques using transforms and animations to get interesting effects. In fact, the css logo you see here, I made using pure css selectors. The background of this section are several skewed elements with partial opaque colors.'
   };
 
   const targetAttribute = event.target.parentElement.dataset.skill;
@@ -39,8 +39,8 @@ const showShit = () => {
  * Add mouseenter and mouseleave event listeners to all skill-icon containers
  */
 Array.from(newSkillItems, el =>  (
-  el.addEventListener('mouseenter', showShit, false),
-  el.addEventListener('mouseleave', showShit, false)
+  el.firstElementChild.addEventListener('mouseenter', showShit, false),
+  el.firstElementChild.addEventListener('mouseleave', showShit, false)
 ));
 
 /**

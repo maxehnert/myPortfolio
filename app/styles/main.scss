@@ -366,7 +366,7 @@ h2 span {
   clip-path: polygon(99% 26%, 99% 74%, 50% 100%, 1% 75%, 1% 25%, 50% 0%);
 }
 
-.react-logo {
+.new-skill-item img.react-logo {
   transform: scale(1);
 }
 
@@ -415,6 +415,48 @@ h2 span {
   padding: 0 1px;
   z-index: 2;
   height: 100%;
+}
+
+.chevron-container {
+  height: 200px;
+  min-height: 200px;
+  width: 175px;
+  min-width: 175px;
+}
+
+.chevron {
+  position: relative;
+  background: #046AB5;
+  height: 100%;
+  clip-path: polygon(100% 0%, 90% 88%, 50% 100%, 10% 88%, 0% 0%);
+}
+
+.chevron:before {
+  background: linear-gradient(
+    to right,
+    #046AB5 0%,
+    #046AB5 50%,
+    #30A8DD 50%,
+    #30A8DD 100%
+  );
+  content: " ";
+  top: 10px;
+  bottom: 10px;
+  position: absolute;
+  right: 10px;
+  left: 10px;
+  clip-path: polygon(100% 0%, 90% 88%, 50% 100%, 10% 88%, 0% 0%);
+}
+
+.chevron:after {
+  content: " ";
+  top: 30px;
+  bottom: 30px;
+  position: absolute;
+  right: 25px;
+  left: 25px;
+  background: white;
+  clip-path: polygon(100% 0%, 90% 88%, 50% 100%, 14% 89%, 10% 60%,25% 60%,28% 80%,50% 87%,75% 79%,77% 54%,28% 54%,26% 39%,79% 39%,81% 15%,2% 15%, 0% 0%);
 }
 
 .skill-shape-1,
