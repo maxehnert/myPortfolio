@@ -1,3 +1,19 @@
+/************************************************************
+
+
+        ************* DO *************
+        *********** NOT ***************
+        ******** USE *****************
+        *********** ANYMORE ************
+
+
+****************************************************************/
+
+
+
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -375,8 +391,12 @@ h2 span {
   clip-path: polygon(99% 26%, 99% 74%, 50% 100%, 1% 75%, 1% 25%, 50% 0%);
 }
 
-.new-skill-item img.react-logo {
-  transform: scale(1);
+.new-skill-item img.backbone-logo {
+  transform: scale(0.65);
+}
+
+.m-skill-desc {
+  display: none;
 }
 
 .skill-desc {
@@ -670,10 +690,6 @@ h2 span {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-  }
-
-  .react-logo {
-    transform: scale(0.75);
   }
 
   .m-skill-desc {

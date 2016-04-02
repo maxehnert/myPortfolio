@@ -1,0 +1,218 @@
+@import "mixins";
+
+/* My Skills Section */
+
+.skill-shapes-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.my-skills {
+  color: #2B2726;
+  position: relative;
+  z-index: 2;
+}
+
+.new-skills {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+.new-skills-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.new-skill-item img {
+  cursor: pointer;
+  transform: scale(0.75);
+}
+
+// Added a semi-transparent background and clipped it into a hexagon to match the logo outline
+.node-logo {
+  background: rgba(0, 0, 0, 0.66);
+  clip-path: polygon(99% 26%, 99% 74%, 50% 100%, 1% 75%, 1% 25%, 50% 0%);
+}
+
+.new-skill-item img.backbone-logo {
+  transform: scale(0.65);
+}
+
+.m-skill-desc {
+  display: none;
+}
+
+.skill-desc {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background: black;
+  // background-image: linear-gradient(HSLA(300, 1%, 37%, 1), black);
+  color: white;
+  font-size: 30px;
+
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  opacity: 0.8;
+
+  max-height: 0;
+  height: 0;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.skill-desc-1 {
+  // background-image: linear-gradient(HSLA(300, 1%, 37%, 1), black);
+  transform: translateY(100%);
+}
+
+.skill-desc-2 {
+  // background-image: linear-gradient(HSLA(300, 1%, 37%, 1) ,black 50%, HSLA(300, 1%, 37%, 1));
+
+  top: 0;
+  transform: translateY(-100%);
+}
+
+.skill-desc-active-js {
+  // max-height: 500px;
+  // transition: max-height 2s ease-in-out;
+
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+  max-height: 1000px;
+  overflow: hidden;
+  padding: 0 1px;
+  z-index: 2;
+  height: 100%;
+}
+
+.chevron-container {
+  // height: 200px;
+  // min-height: 200px;
+  // width: 175px;
+  // min-width: 175px;
+}
+
+.chevron {
+  height: 200px;
+  min-height: 200px;
+  width: 175px;
+  min-width: 175px;
+  position: relative;
+  background: #046AB5;
+  //height: 100%;
+  clip-path: polygon(100% 0%, 90% 88%, 50% 100%, 10% 88%, 0% 0%);
+}
+
+.chevron:before {
+  background: linear-gradient(
+    to right,
+    #046AB5 0%,
+    #046AB5 50%,
+    #30A8DD 50%,
+    #30A8DD 100%
+  );
+  content: " ";
+  top: 10px;
+  bottom: 10px;
+  position: absolute;
+  right: 10px;
+  left: 10px;
+  clip-path: polygon(100% 0%, 90% 88%, 50% 100%, 10% 88%, 0% 0%);
+}
+
+.chevron:after {
+  content: " ";
+  top: 30px;
+  bottom: 30px;
+  position: absolute;
+  right: 25px;
+  left: 25px;
+  background: white;
+  clip-path: polygon(100% 0%, 90% 88%, 50% 100%, 14% 89%, 10% 60%, 25% 60%, 28% 80%, 50% 87%, 75% 79%, 77% 54%, 28% 54%, 26% 39%, 79% 39%, 81% 15%, 2% 15%, 0% 0%);
+}
+
+.skill-shape-1,
+.skill-shape-2,
+.skill-shape-3,
+.skill-shape-4,
+.skill-shape-5 {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.skill-shape-1 {
+  background: HSLA(84, 73%, 78%, 0.6);
+  transform: skew(300deg, 20deg);
+}
+
+.skill-shape-2 {
+  background: HSLA(120, 41%, 76%, 0.6);
+  transform: skew(20deg, 300deg);
+}
+
+.skill-shape-3 {
+  background: HSLA(149, 34%, 61%, 0.6);
+  transform: skew(30deg, 20deg);
+}
+
+.skill-shape-4 {
+  background: HSLA(180, 39%, 38%, 0.6);
+  transform: skew(-60deg, 137deg);
+}
+
+.skill-shape-5 {
+  background: HSLA(202, 81%, 23%, 0.6);
+  transform: skew(77deg, 182deg);
+}
+
+
+@media (max-width: 768px) {
+
+  //Skills adjustments -4/2/16
+  .new-skills {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+  }
+
+  .new-skills-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .new-skill-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .m-skill-desc {
+    // text-align: center;
+    background: rgba(245, 238, 238, 0.27);
+    @include content-desc(#31393A);
+    padding: 1rem;
+
+    span {
+      display: block;
+    }
+  }
+
+  .chevron-container {
+    min-height: 282px;
+    display: flex;
+    align-items: center;
+  }
+}

@@ -1,0 +1,83 @@
+@import "mixins";
+
+/* MY PROJECTS Section */
+.flex-container-work {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+}
+
+.flex-item-work {
+  display: flex;
+  flex-flow: row;
+
+  .img-container {
+    flex: auto;
+    margin: 5px 10px;
+    max-width: 755px;
+  }
+}
+
+/* Change Formatting for Mobile Use */
+@media (max-width: 1110px) {
+  .flex-item-work {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 992px) {
+
+  // My Work Content Adjustments
+  .work-description {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+
+.work-description {
+  margin: 0 10px;
+  width: 60%;
+
+  h2 {
+    color: #2B2726;
+    margin-top: 10px;
+  }
+
+  p,
+  a,
+  span {
+    /*color: HSLA(0, 0%, 93%, 1);*/
+    // color: #BACCA4;
+    // font-family: 'Titillium Web', sans-serif;
+    // font-size: 21px;
+    // font-weight: 300;
+    // line-height: 30px;
+  @include content-desc(#BACCA4);
+  }
+
+  .info {
+    font-weight: bold;
+  }
+
+  a:hover {
+    /*color: HSLA(200, 69%, 54%, 1);*/
+    color: #2B2726;
+    text-decoration: none;
+  }
+
+  a::after {
+    color: #2B2726;
+    text-decoration: none;
+  }
+}
+
+.img-responsive {
+  border: 1px solid white;
+}
+
+@media (max-width: 768px) {
+  .img-responsive {
+    height: auto;
+    width: 100%;
+  }
+}

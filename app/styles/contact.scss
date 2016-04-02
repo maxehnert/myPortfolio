@@ -1,0 +1,61 @@
+/* Contact Me Section */
+.flex-container-contact {
+  display: flex;
+  flex-flow: column;
+}
+
+.flex-item-contact {
+  margin: auto;
+}
+
+.contact-head {
+  color: black;
+  margin-bottom: 20px;
+  padding-top: 20%;
+}
+
+.heading-contact {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.my-name-contact {
+  border-bottom: 2px solid black;
+}
+
+.contact-container {
+  text-align: center;
+}
+
+.close-statement {
+  width: 90%;
+}
+
+.close-statement p {
+  color: HSLA(0, 67%, 99%, 1);
+  font-family: 'Roboto Slab', serif;
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  padding-top: 80px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .close-statement p {
+    color: grey;
+    font-family: 'Roboto Slab', serif;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 450px) {
+
+  // Contact Content Adjustments
+  .quote {
+    display: none;
+  }
+}

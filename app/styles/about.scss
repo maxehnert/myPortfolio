@@ -1,0 +1,90 @@
+/* About Me Section */
+.about-me {
+/*  color: black;*/
+  color: #BACCA4;
+  padding-top: 5%;
+}
+
+@media (max-width: 992px) {
+
+  /* About Content Adjustments */
+  .flex-item-about {
+    width: 100%;
+  }
+
+  .about-container {
+    flex-wrap: wrap;
+  }
+
+  .section-content {
+    margin-right: 0px;
+  }
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 5%;
+}
+
+.flex-item-about {
+  width: 50%;
+}
+
+.section-content {
+  margin-right: 10px;
+}
+
+.section-content p {
+/*  color: black; */
+  color: #BACCA4;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 28px;
+  margin: 0 0px 10px;
+  text-align: left;
+}
+
+.section-content a {
+  color: #2B2726;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.section-content a::after {
+  color: #2B2726;
+}
+
+.github-user {
+  color: black;
+
+  .gt-container {
+    border: none;
+    box-shadow: 0 4px 4px HSLA(0, 0%, 63%, 1);
+  }
+
+  .user-name {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 30px;
+  }
+
+  .user-login {
+    font-size: 20px;
+  }
+
+  .gt-usr-img {
+    box-shadow: 0 4px 4px HSLA(0, 0%, 63%, 1);
+  }
+
+  .gt-usr-details {
+    font-size: 20px;
+    margin-bottom: 1%;
+  }
+
+  .gt-activity-cnt {
+    font-size: 20px;
+    height: 50vh;
+    margin-bottom: 10px;
+  }
+}

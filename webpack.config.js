@@ -60,7 +60,7 @@ var config = {
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader", 'postcss-loader')
       },
       {
         test: /\.scss$/,

@@ -1,7 +1,17 @@
 // require('../../node_modules/normalize.css/normalize.css');
 require('../../bower_components/looper/src/looper.css');
 require('../../node_modules/githubjs/src/github.css');
-require('../styles/main.scss');
+
+// require('../styles/new-main.scss');
+require("../styles/layout.scss");
+require("../styles/tooltip.scss");
+require("../styles/navigation.scss");
+require("../styles/home.scss");
+require("../styles/about.scss");
+require("../styles/skills.scss");
+require("../styles/projects.scss");
+require("../styles/contact.scss");
+
 var Github = require('../../bower_components/githubjs/dist/github.min.js');
 
 /**
