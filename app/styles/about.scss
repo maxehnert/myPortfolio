@@ -1,13 +1,15 @@
 /* About Me Section */
 .about-me {
-/*  color: black;*/
   color: #BACCA4;
   padding-top: 5%;
 }
 
+
+
+/*
 @media (max-width: 992px) {
 
-  /* About Content Adjustments */
+
   .flex-item-about {
     width: 100%;
   }
@@ -20,23 +22,22 @@
     margin-right: 0px;
   }
 }
+*/
 
 .about-container {
   display: flex;
   flex-direction: row;
-  margin: 0 5%;
+  flex-wrap: wrap;
+  margin: 0 4%;
 }
 
 .flex-item-about {
-  width: 50%;
+  // width: 50%;
 }
 
-.section-content {
-  margin-right: 10px;
-}
+
 
 .section-content p {
-/*  color: black; */
   color: #BACCA4;
   font-family: 'Titillium Web', sans-serif;
   font-size: 21px;
@@ -57,7 +58,7 @@
 }
 
 .github-user {
-  color: black;
+  color: #000000;
 
   .gt-container {
     border: none;
@@ -86,5 +87,24 @@
     font-size: 20px;
     height: 50vh;
     margin-bottom: 10px;
+  }
+
+  @media (max-width: 374px) {
+    display: none;
+  }
+}
+
+@media (min-width: 993px) {
+  .about-container {
+    flex-wrap: nowrap;
+    margin: 0 1%;
+  }
+
+  .flex-item-about {
+    width: 50%;
+  }
+
+  .section-content {
+    margin-right: 10px;
   }
 }

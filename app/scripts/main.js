@@ -56,12 +56,12 @@ Array.from(newSkillItems, el =>  (
 /**
  * Github Profile Activity Widget.
 */
-// Github.userActivity({
-//   username: "maxehnert",
-//   OAuth: 'f0856bc0ec459444238129a1a2bca2cf2e35b8f7',
-//   selector: ".github-user",
-//   limit: 20
-// });
+Github.userActivity({
+  username: "maxehnert",
+  OAuth: 'f0856bc0ec459444238129a1a2bca2cf2e35b8f7',
+  selector: ".github-user",
+  limit: 20
+});
 
 /**
  * Define a few variables that are frequently used so I don't have to do a query each time

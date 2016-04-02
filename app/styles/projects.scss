@@ -38,7 +38,6 @@
 
 }
 
-
 .work-description {
   margin: 0 10px;
 
@@ -50,12 +49,7 @@
   p,
   a,
   span {
-    /*color: HSLA(0, 0%, 93%, 1);*/
-    // color: #BACCA4;
-    // font-family: 'Titillium Web', sans-serif;
-    // font-size: 21px;
-    // font-weight: 300;
-    // line-height: 30px;
+
   @include content-desc(#BACCA4);
   }
 
@@ -64,7 +58,6 @@
   }
 
   a:hover {
-    /*color: HSLA(200, 69%, 54%, 1);*/
     color: #2B2726;
     text-decoration: none;
   }
