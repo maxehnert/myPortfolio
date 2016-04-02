@@ -355,20 +355,20 @@ h2 span {
   position: relative;
 }
 
-.new-skill-item {
-  // padding: 1px;
-
-  img {
-    transform: scale(0.75);
-  }
+.new-skill-item img {
+  cursor: pointer;
+  transform: scale(0.75);
 }
 
-/*
-.new-skill-item:hover {
-  border: 1px solid white;
-  padding: 0;
+// Added a semi-transparent background and clipped it into a hexagon to match the logo outline
+.node-logo {
+  background: rgba(0, 0, 0, 0.66);
+  clip-path: polygon(99% 26%, 99% 74%, 50% 100%, 1% 75%, 1% 25%, 50% 0%);
 }
-*/
+
+.react-logo {
+  transform: scale(1);
+}
 
 .skill-desc {
   display: flex;
@@ -394,9 +394,7 @@ h2 span {
 
 .skill-desc-1 {
   // background-image: linear-gradient(HSLA(300, 1%, 37%, 1), black);
-
-  transform: translateY(94%);
-
+  transform: translateY(100%);
 }
 
 .skill-desc-2 {
@@ -414,7 +412,8 @@ h2 span {
   transition-timing-function: ease-in;
   max-height: 1000px;
   overflow: hidden;
-z-index: 2;
+  padding: 0 1px;
+  z-index: 2;
   height: 100%;
 }
 
@@ -454,49 +453,6 @@ z-index: 2;
   background: HSLA(202, 81%, 23%, 0.6);
   transform: skew(77deg, 182deg);
 }
-
-/*
-.skills-img-container {
-  border-bottom: 4px solid HSLA(200,69%,54%,1);
-  margin: 5px;
-  padding-bottom: 10px;
-  text-align: center;
-
-  .img-skill {
-    height: 100px;
-    padding: 5px;
-    width: 100px;
-  }
-
-  .imgnone {
-    opacity: 0;
-  }
-}
-
-.skills-p {
-  font-size: 20px;
-  padding: 5px;
-  text-align: center;
-}
-
-.flex-container-skills {
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: row;
-  margin: 0 10px;
-}
-
-.flex-item-skills-category {
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.flex-skills-icons {
-  justify-content: center;
-  display: flex;
-}
-
-*/
 
 /* MY PROJECTS Section */
 .flex-container-work {
@@ -758,6 +714,10 @@ z-index: 2;
   // Change Navigation Layout for Mobile
   .navigation {
     -webkit-flex-flow: column;
+
+    &.navigation-expand {
+      height: 100%;
+    }
   }
 
   .navigation-title {
@@ -787,7 +747,7 @@ z-index: 2;
 }
 
 
-//////////TOOL TIP////////////////////
+/*/////////TOOL TIP///////////////////*/
 
 [class^="tooltip"] {
   position: relative;

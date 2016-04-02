@@ -4,11 +4,11 @@ require('../../node_modules/githubjs/src/github.css');
 require('../styles/main.scss');
 var Github = require('../../bower_components/githubjs/dist/github.min.js');
 
-/*
-*  When you hover over a skills icon it should make the other row disapear behind a cover div with text relating to that icon.
+/**
+ * When you hover over a skills icon it should make the other row disapear behind a cover div with text relating to that icon.
 */
 
-var newSkillItems = document.querySelectorAll('.new-skill-item-js');
+var newSkillItems = document.querySelectorAll('.new-skill-item-js img');
 
 const showShit = () => {
 
@@ -26,43 +26,41 @@ const showShit = () => {
     css: 'Writing clean css and markup is something I take pride in as css files in large projects tend to turn into messes. I enjoy trying new techniques using transforms and animations to get interesting effects.'
   };
 
-  const targetAttribute = event.target.dataset.skill;
+  const targetAttribute = event.target.parentElement.dataset.skill;
 
-  // Figure out which row you're on and select the opposite overlay el
-  // let skillDesc = event.target.parentNode.nextElementSibling ?
-  //   document.querySelector('.skill-desc-1') :
-  //   document.querySelector('.skill-desc-2');
-  let skillDesc = event.target.parentNode.lastElementChild;
+  let skillDesc = event.target.parentElement.parentElement.lastElementChild;
 
   skillDesc.firstElementChild.innerHTML = skillDesc.classList.contains('skill-desc-active-js') ? '' : skillsTextObj[targetAttribute];
 
-
   skillDesc.classList.toggle('skill-desc-active-js');
+};
 
-}
-
-// Add mouseenter and mouseleave event listeners to all skill-icon containers
+/**
+ * Add mouseenter and mouseleave event listeners to all skill-icon containers
+ */
 Array.from(newSkillItems, el =>  (
   el.addEventListener('mouseenter', showShit, false),
   el.addEventListener('mouseleave', showShit, false)
 ));
 
-/*
+/**
  * Github Profile Activity Widget.
 */
+Github.userActivity({
+  username: "maxehnert",
+  OAuth: 'f0856bc0ec459444238129a1a2bca2cf2e35b8f7',
+  selector: ".github-user",
+  limit: 20
+});
 
-// Github.userActivity({
-//   username: "maxehnert",
-//   OAuth: 'f0856bc0ec459444238129a1a2bca2cf2e35b8f7',
-//   selector: ".github-user",
-//   limit: 20
-// });
-
+/**
+ * Define a few variables that are frequently used so I don't have to do a query each time
+*/
 const navLinkCollapsed = document.querySelector('.navigation-link-collapsed');
 const jsBurger = document.querySelector('.js-burger');
 const navLinkCollapsedA = document.querySelectorAll('.navigation-link-collapsed a');
 
-/*
+/**
  * Toggle the hamburger icon and display nav links.
 */
 const toggleBurger = () => {
@@ -72,7 +70,7 @@ const toggleBurger = () => {
 };
 Array.from([jsBurger], el => el.addEventListener('click', toggleBurger, false));
 
-/*
+/**
  * Toggle nav links and hamburger after clicking on one.
 */
 const toggleNavCollapse = () => {
@@ -82,26 +80,16 @@ const toggleNavCollapse = () => {
 };
 Array.from(navLinkCollapsedA, el => el.addEventListener('click', toggleNavCollapse, false));
 
-/*
- * Show opaque overlay over the site when the mobile nav is open.
+/**
+ * Expand mobile nav height 100% when open.
 */
 const overlay = () => {
-  let bod = document.getElementById('top');
-  let overlay = document.querySelector('.overlay');
-
-  overlay.classList.toggle('overlay_flash');
-
-  // Only show the overlay if the mobile nav is open
-  if ( overlay.scrollHeight > 0 ||
-       document.querySelector('.navigation-link-collapsed-hide') ) {
-         overlay.style.height = '0px';
-  } else {
-    document.querySelector('.overlay_flash').style.height = bod.scrollHeight + 'px';
-  }
-}
+  let navBar = document.querySelector('.navigation');
+  navBar.classList.toggle('navigation-expand')
+};
 
 
-/*
+/**
  * Scrolls to targeted id.
 */
 var last_known_scroll_position = 0;
@@ -156,7 +144,7 @@ window.addEventListener('scroll', function(e) {
   ticking = true;
 });
 
-/*
+/**
  * Display a quote at the end of the Contact section .
 */
 const quoteLoop = () => {
