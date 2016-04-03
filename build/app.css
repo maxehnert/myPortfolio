@@ -577,11 +577,11 @@ body {
 
 /* Landing page background Image */
 .cd-fixed-bg.cd-bg-1 {
-  background-image: url(/builde95ae161afbb4ceb3c5e2467141bfbc4.png); }
+  background-image: url(/build/e95ae161afbb4ceb3c5e2467141bfbc4.png); }
 
 /* Contact Section Background Image */
 .cd-fixed-bg-end.cd-bg-3 {
-  background-image: linear-gradient(HSLA(0, 0%, 100%, 0.07), HSLA(0, 0%, 100%, 0.07)), url(/buildbe42e33781fff8a6a69acf7bc04a04c0.png); }
+  background-image: linear-gradient(HSLA(0, 0%, 100%, 0.07), HSLA(0, 0%, 100%, 0.07)), url(/build/be42e33781fff8a6a69acf7bc04a04c0.png); }
 
 /* Adds opacity to body when mobile nav open */
 .overlay_flash {
