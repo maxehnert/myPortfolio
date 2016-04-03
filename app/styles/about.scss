@@ -47,6 +47,10 @@
   text-align: left;
 }
 
+.section-content p span {
+  display: block;
+}
+
 .section-content a {
   color: #2B2726;
   font-weight: bold;
@@ -55,6 +59,10 @@
 
 .section-content a::after {
   color: #2B2726;
+}
+
+.gt-header {
+  background: #2B2726;
 }
 
 .github-user {
@@ -78,15 +86,28 @@
     box-shadow: 0 4px 4px HSLA(0, 0%, 63%, 1);
   }
 
+  .gt-usr-name {
+    color: #FFFFFF;
+  }
+
   .gt-usr-details {
     font-size: 20px;
     margin-bottom: 1%;
   }
 
+  .gt-usr-details a {
+    color: #FFFFFF;
+  }
+
   .gt-activity-cnt {
+    background: #E4E4E4;
     font-size: 20px;
     height: 50vh;
     margin-bottom: 10px;
+  }
+
+  .gt-activity {
+    border-top: 1px solid #737373;
   }
 
   @media (max-width: 374px) {

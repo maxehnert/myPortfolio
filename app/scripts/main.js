@@ -58,7 +58,6 @@ Array.from(newSkillItems, el =>  (
 */
 Github.userActivity({
   username: "maxehnert",
-  OAuth: 'f0856bc0ec459444238129a1a2bca2cf2e35b8f7',
   selector: ".github-user",
   limit: 20
 });
