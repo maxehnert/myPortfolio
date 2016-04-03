@@ -12,7 +12,7 @@ require("../styles/skills.scss");
 require("../styles/projects.scss");
 require("../styles/contact.scss");
 
-var Github = require('../../bower_components/githubjs/dist/github.min.js');
+var Github = require('../../node_modules/githubjs/dist/github.min.js');
 
 /**
  * When you hover over a skills icon it should make the other row disapear behind a cover div with text relating to that icon.

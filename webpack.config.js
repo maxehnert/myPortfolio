@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const pkg = require('./package.json');
-const Clean = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
@@ -27,7 +26,7 @@ var config = {
       // jquery: bower_dir + '/jquery/jquery.min.js',
       // underscore: bower_dir + '/underscore/underscore.js',
       looper: bower_dir + '/looper/src/looper.min.js',
-      githubjs: bower_dir + '/githubjs/dist/github.min.js'
+      githubjs: node_dir + '/githubjs/dist/github.min.js'
       // waypoint: bower_dir + '/waypoints/lib/jquery.waypoints.min.js'
     },
     extensions: ['', '.js', '.css', '.scss', '.sass']

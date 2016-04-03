@@ -2,7 +2,6 @@
   "name": "myportfolio",
   "private": true,
   "dependencies": {
-    "looper": "~1.1.6",
-    "githubjs": "~0.1.3"
+    "looper": "~1.1.6"
   }
 }
