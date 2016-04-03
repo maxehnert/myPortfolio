@@ -7,5 +7,7 @@ test/bower_components
 ._.DS_Store
 .idea/*
 .env
-app/images
-dist/images
+app/images/._*
+dist
+build
+npm-debug.log

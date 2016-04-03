@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html,
+main {
+  height: 100%;
+}
+
+body {
+  background: #fafafa;
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: relative;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.about-me,
+.my-skills,
+.my-work,
+.contact-head {
+  font-family: 'Roboto Slab', serif;
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.about-me,
+.my-skills,
+.my-work {
+  margin-bottom: 5%;
+  margin-top: 0;
+  padding-top: 10%;
+}
+
+/* Background Images and Colors */
+
+/* Set attributes for background images*/
+.cd-fixed-bg,
+.cd-fixed-bg-end {
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+}
+
+.cd-scrolling-bg {
+  min-height: 100%;
+}
+
+.cd-scrolling-bg-end {
+  min-height: 60%;
+}
+
+/* Landing page background Image */
+.cd-fixed-bg.cd-bg-1 {
+  background-image: url("../images/mountain.png");
+}
+
+/* Contact Section Background Image */
+.cd-fixed-bg-end.cd-bg-3 {
+
+  background-image:
+  /* Little trick to give an overlay that lightens the image
+   * for better contrast of text, faking with gradient
+   * is the easiest way to do this
+   */
+    linear-gradient(
+    HSLA(0, 0%, 100%, 0.07),
+    HSLA(0, 0%, 100%, 0.07)
+    ),
+    url("../images/road.png");
+}
+
+/* Adds opacity to body when mobile nav open */
+.overlay_flash {
+  background-color: HSLA(0, 0%, 0%, 0.7);
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  overflow: visible;
+  width: 100%;
+  z-index: 2;
+}
+
+/* About Section */
+.cd-color-1 {
+/*  background-color: HSLA(0, 0%, 93%, 1);*/
+background-color: #0A516D;
+}
+
+/* Skills Section */
+.cd-color-2 {
+/*  background-color: HSLA(300, 1%, 37%, 1);*/
+background-color: #7DAD93;
+}
+
+/* Work Section */
+.cd-color-3 {
+/*  background-color: HSLA(0, 0%, 16%, 1);*/
+  background-color: #018790;
+}
+
+/* END Background Images and Colors */
+
+@media (max-width: 768px) {
+
+  .cd-fixed-bg.cd-bg-1 {
+    background-color: HSLA(214, 19%, 58%, 1);
+    background-image: none;
+  }
+
+  .cd-fixed-bg-end.cd-bg-3 {
+    background-color: HSLA(203, 23%, 64%, 1);
+    background-image: none;
+  }
+}

@@ -1,0 +1,171 @@
+/* Navigation */
+
+.navigation {
+  list-style: none;
+  margin: 0;
+  /*background: black;*/
+  background-color: rgba(72, 72, 72, 0.95);
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+}
+
+.navigation-link a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+.navigation a:hover {
+  background: rgba(72, 72, 72, 0.95)
+}
+
+.flex-nav-brand {
+  padding: 0;
+  text-decoration: none;
+  display: block;
+  color: white;
+}
+
+.navigation-title {
+  display: flex;
+  -webkit-flex-flow: row;
+  justify-content: flex-start;
+  align-self: center;
+  font-family: 'Roboto Slab', serif;
+  font-size: 25px;
+  padding-left: 40px;
+}
+
+.navigation-link {
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-end;
+  align-self: center;
+  flex-grow: 3;
+
+}
+
+.navigation-title a:hover {
+  color: HSLA(200, 69%, 54%, 1);
+  text-decoration: none;
+}
+
+.navigation-link a:hover {
+  background-color: transparent;
+  border-bottom-color: HSLA(200, 69%, 54%, 1);
+  border-bottom-style: solid;
+  border-bottom-width: 4px;
+  border-radius: 0px;
+  color: HSLA(200, 69%, 54%, 1);
+  text-decoration: none;
+}
+
+.active-nav {
+  background-color: transparent;
+  border-bottom-color: HSLA(200, 69%, 54%, 1);
+  border-bottom-style: solid;
+  border-bottom-width: 4px;
+  border-radius: 0px;
+  color: HSLA(200, 69%, 54%, 1);
+  text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+  // Hamburger Icon
+  .burger {
+  	position: relative;
+  	display: block;
+  	height: 50px;
+  	width: 50px;
+  }
+
+  // Change line color on hover
+  .burger:hover span,
+  .burger:hover span:before,
+  .burger:hover span:after {
+    background: HSLA(200, 69%, 54%, 1);
+  }
+
+  .burger span {
+    position: absolute;
+    top: 23px;
+    left: 10px;
+    width: 30px;
+    height: 5px;
+    background: white;
+    border-radius: 1rem;
+    margin:auto;
+  }
+
+  .burger span:before,
+  .burger span:after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 5px;
+    background: white;
+    border-radius: 1rem;
+    margin: auto;
+  }
+
+  .burger span:before {
+    top: -10px;
+  }
+
+  .burger span:after {
+    top: 10px;
+  }
+
+  // Animate the burger icon on toggle click
+  .burger.open span {
+    background: transparent;
+  }
+
+  .burger.open span:before,
+  .burger.open span:after {
+    top: 0px;
+    width: 50px;
+    margin: auto;
+    left: -10px;
+  }
+
+  .burger.open span:before {
+    transform: rotate(-135deg);
+  }
+
+  .burger.open span:after {
+    transform: rotate(135deg);
+  }
+
+  // Change Navigation Layout for Mobile
+  .navigation {
+    -webkit-flex-flow: column;
+
+    &.navigation-expand {
+      height: 100%;
+    }
+  }
+
+  .navigation-title {
+    justify-content: space-between;
+    align-self: auto;
+    align-items: center;
+  }
+
+  .navigation-link-collapsed {
+    display: flex;
+    -webkit-flex-flow: column;
+    justify-content: flex-start;
+    align-self: auto;
+  }
+
+  .navigation-link-collapsed-hide {
+    display: none;
+  }
+}
