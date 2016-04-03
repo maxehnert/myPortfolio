@@ -9,5 +9,4 @@ test/bower_components
 .env
 app/images/._*
 dist
-build
 npm-debug.log
