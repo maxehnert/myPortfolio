@@ -1,3 +1,19 @@
+/************************************************************
+
+
+        ************* DO *************
+        *********** NOT ***************
+        ******** USE *****************
+        *********** ANYMORE ************
+
+
+****************************************************************/
+
+
+
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +30,15 @@ body {
   color: white;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   position: relative;
+}
+
+@mixin content-desc($color) {
+  // color: #BACCA4;
+  color: $color;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 30px;
 }
 
 .row {
@@ -94,17 +119,20 @@ body {
 
 /* About Section */
 .cd-color-1 {
-  background-color: HSLA(0, 0%, 93%, 1);
+/*  background-color: HSLA(0, 0%, 93%, 1);*/
+background-color: #0A516D;
 }
 
 /* Skills Section */
 .cd-color-2 {
-  background-color: HSLA(300, 1%, 37%, 1);
+/*  background-color: HSLA(300, 1%, 37%, 1);*/
+background-color: #7DAD93;
 }
 
 /* Work Section */
 .cd-color-3 {
-  background-color: HSLA(0, 0%, 16%, 1);
+/*  background-color: HSLA(0, 0%, 16%, 1);*/
+  background-color: #018790;
 }
 
 /* END Background Images and Colors */
@@ -114,7 +142,8 @@ body {
 .navigation {
   list-style: none;
   margin: 0;
-  background: black;
+  /*background: black;*/
+  background-color: rgba(72, 72, 72, 0.95);
   display: flex;
   -webkit-flex-flow: row wrap;
   position: fixed;
@@ -131,7 +160,7 @@ body {
 }
 
 .navigation a:hover {
-  background: darken(black, 2%);
+  background: rgba(72, 72, 72, 0.95)
 }
 
 .flex-nav-brand {
@@ -251,7 +280,8 @@ h2 span {
 
 /* About Me Section */
 .about-me {
-  color: black;
+/*  color: black;*/
+  color: #BACCA4;
   padding-top: 5%;
 }
 
@@ -270,13 +300,24 @@ h2 span {
 }
 
 .section-content p {
-  color: black;
+/*  color: black; */
+  color: #BACCA4;
   font-family: 'Titillium Web', sans-serif;
   font-size: 21px;
   font-weight: 300;
   line-height: 28px;
   margin: 0 0px 10px;
   text-align: left;
+}
+
+.section-content a {
+  color: #2B2726;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.section-content a::after {
+  color: #2B2726;
 }
 
 .github-user {
@@ -313,44 +354,179 @@ h2 span {
 }
 
 /* My Skills Section */
-.skills-img-container {
-  border-bottom: 4px solid HSLA(200,69%,54%,1);
-  margin: 5px;
-  padding-bottom: 10px;
-  text-align: center;
 
-  .img-skill {
-    height: 100px;
-    padding: 5px;
-    width: 100px;
-  }
-
-  .imgnone {
-    opacity: 0;
-  }
+.skill-shapes-container {
+  position: relative;
+  overflow: hidden;
 }
 
-.skills-p {
-  font-size: 20px;
-  padding: 5px;
-  text-align: center;
+.my-skills {
+  color: #2B2726;
+  position: relative;
+  z-index: 2;
 }
 
-.flex-container-skills {
-  display: -webkit-flex;
+.new-skills {
   display: flex;
-  flex-flow: row;
-  margin: 0 10px;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+.new-skills-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
 }
 
-.flex-item-skills-category {
-  flex-wrap: wrap;
+.new-skill-item img {
+  cursor: pointer;
+  transform: scale(0.75);
+}
+
+// Added a semi-transparent background and clipped it into a hexagon to match the logo outline
+.node-logo {
+  background: rgba(0, 0, 0, 0.66);
+  clip-path: polygon(99% 26%, 99% 74%, 50% 100%, 1% 75%, 1% 25%, 50% 0%);
+}
+
+.new-skill-item img.backbone-logo {
+  transform: scale(0.65);
+}
+
+.m-skill-desc {
+  display: none;
+}
+
+.skill-desc {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background: black;
+  // background-image: linear-gradient(HSLA(300, 1%, 37%, 1), black);
+  color: white;
+  font-size: 30px;
+
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  opacity: 0.8;
+
+  max-height: 0;
+  height: 0;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.skill-desc-1 {
+  // background-image: linear-gradient(HSLA(300, 1%, 37%, 1), black);
+  transform: translateY(100%);
+}
+
+.skill-desc-2 {
+  // background-image: linear-gradient(HSLA(300, 1%, 37%, 1) ,black 50%, HSLA(300, 1%, 37%, 1));
+
+  top: 0;
+  transform: translateY(-100%);
+}
+
+.skill-desc-active-js {
+  // max-height: 500px;
+  // transition: max-height 2s ease-in-out;
+
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+  max-height: 1000px;
+  overflow: hidden;
+  padding: 0 1px;
+  z-index: 2;
+  height: 100%;
+}
+
+.chevron-container {
+  // height: 200px;
+  // min-height: 200px;
+  // width: 175px;
+  // min-width: 175px;
+}
+
+.chevron {
+  height: 200px;
+  min-height: 200px;
+  width: 175px;
+  min-width: 175px;
+  position: relative;
+  background: #046AB5;
+  //height: 100%;
+  clip-path: polygon(100% 0%, 90% 88%, 50% 100%, 10% 88%, 0% 0%);
+}
+
+.chevron:before {
+  background: linear-gradient(
+    to right,
+    #046AB5 0%,
+    #046AB5 50%,
+    #30A8DD 50%,
+    #30A8DD 100%
+  );
+  content: " ";
+  top: 10px;
+  bottom: 10px;
+  position: absolute;
+  right: 10px;
+  left: 10px;
+  clip-path: polygon(100% 0%, 90% 88%, 50% 100%, 10% 88%, 0% 0%);
+}
+
+.chevron:after {
+  content: " ";
+  top: 30px;
+  bottom: 30px;
+  position: absolute;
+  right: 25px;
+  left: 25px;
+  background: white;
+  clip-path: polygon(100% 0%, 90% 88%, 50% 100%, 14% 89%, 10% 60%, 25% 60%, 28% 80%, 50% 87%, 75% 79%, 77% 54%, 28% 54%, 26% 39%, 79% 39%, 81% 15%, 2% 15%, 0% 0%);
+}
+
+.skill-shape-1,
+.skill-shape-2,
+.skill-shape-3,
+.skill-shape-4,
+.skill-shape-5 {
+  position: absolute;
+  top: 0;
+  height: 100%;
   width: 100%;
+  z-index: 1;
 }
 
-.flex-skills-icons {
-  justify-content: center;
-  display: flex;
+.skill-shape-1 {
+  background: HSLA(84, 73%, 78%, 0.6);
+  transform: skew(300deg, 20deg);
+}
+
+.skill-shape-2 {
+  background: HSLA(120, 41%, 76%, 0.6);
+  transform: skew(20deg, 300deg);
+}
+
+.skill-shape-3 {
+  background: HSLA(149, 34%, 61%, 0.6);
+  transform: skew(30deg, 20deg);
+}
+
+.skill-shape-4 {
+  background: HSLA(180, 39%, 38%, 0.6);
+  transform: skew(-60deg, 137deg);
+}
+
+.skill-shape-5 {
+  background: HSLA(202, 81%, 23%, 0.6);
+  transform: skew(77deg, 182deg);
 }
 
 /* MY PROJECTS Section */
@@ -367,7 +543,7 @@ h2 span {
   .img-container {
     flex: auto;
     margin: 5px 10px;
-    max-width: 750px;
+    max-width: 755px;
   }
 }
 
@@ -376,17 +552,20 @@ h2 span {
   width: 60%;
 
   h2 {
+    color: #2B2726;
     margin-top: 10px;
   }
 
   p,
   a,
   span {
-    color: HSLA(0, 0%, 93%, 1);
-    font-family: 'Titillium Web', sans-serif;
-    font-size: 21px;
-    font-weight: 300;
-    line-height: 30px;
+    /*color: HSLA(0, 0%, 93%, 1);*/
+    // color: #BACCA4;
+    // font-family: 'Titillium Web', sans-serif;
+    // font-size: 21px;
+    // font-weight: 300;
+    // line-height: 30px;
+  @include content-desc(#BACCA4);
   }
 
   .info {
@@ -394,15 +573,19 @@ h2 span {
   }
 
   a:hover {
-    color: HSLA(200, 69%, 54%, 1);
+    /*color: HSLA(200, 69%, 54%, 1);*/
+    color: #2B2726;
+    text-decoration: none;
+  }
+
+  a::after {
+    color: #2B2726;
     text-decoration: none;
   }
 }
 
 .img-responsive {
   border: 1px solid white;
-   height: auto;
-   width: 100%;
 }
 
 /* Contact Me Section */
@@ -457,16 +640,7 @@ h2 span {
 
 @media (max-width: 992px) {
 
-  // Skills Content Adjustments
-  .flex-container-skills {
-    flex-wrap: wrap;
-  }
-
-  .flex-skills-icons {
-    justify-content: space-around;
-  }
-
-  // About Content Adjustments
+  /* About Content Adjustments */
   .flex-item-about {
     width: 100%;
   }
@@ -496,6 +670,50 @@ h2 span {
   .cd-fixed-bg-end.cd-bg-3 {
     background-color: HSLA(203, 23%, 64%, 1);
     background-image: none;
+  }
+
+  //Skills adjustments -4/2/16
+  .new-skills {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+  }
+
+  .new-skills-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .new-skill-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .m-skill-desc {
+    // text-align: center;
+    background: rgba(245, 238, 238, 0.27);
+    @include content-desc(#31393A);
+    padding: 1rem;
+
+    span {
+      display: block;
+    }
+  }
+
+  .chevron-container {
+    min-height: 282px;
+    display: flex;
+    align-items: center;
+  }
+
+  /******************/
+
+  .img-responsive {
+    height: auto;
+    width: 100%;
   }
 
   .close-statement p {
@@ -605,6 +823,10 @@ h2 span {
   // Change Navigation Layout for Mobile
   .navigation {
     -webkit-flex-flow: column;
+
+    &.navigation-expand {
+      height: 100%;
+    }
   }
 
   .navigation-title {
@@ -634,7 +856,7 @@ h2 span {
 }
 
 
-//////////TOOL TIP////////////////////
+/*/////////TOOL TIP///////////////////*/
 
 [class^="tooltip"] {
   position: relative;

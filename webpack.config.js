@@ -60,14 +60,14 @@ var config = {
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader", 'postcss-loader')
       },
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('style', ['css','sass', 'postcss-loader'])
       },
       {
-        test:   /\.(png|gif|jpe?g|svg)$/i,
+        test:   /\.(png|gif|jpe?g|svg|ico)$/i,
         loader: 'url?limit=10000',
       }
     ]

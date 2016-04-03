@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>Max Ehnert</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="icon" href="../app/favicon.ico" type="image/x-icon"/>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -74,7 +75,7 @@
           <i class="fa fa-3x fa-envelope-o fa-links"></i></a>
         <a target="_blank" href="https://github.com/maxehnert" class="tooltip--triangle" data-tooltip="My Repos">
           <i class="fa fa-3x fa-github fa-links"></i></a>
-        <a target="_blank" href="https://www.linkedin.com/pub/max-ehnert/80/203/624" class="tooltip--triangle" data-tooltip="Let's Connectx">
+        <a target="_blank" href="https://www.linkedin.com/pub/max-ehnert/80/203/624" class="tooltip--triangle" data-tooltip="Let's Connect">
           <i class="fa fa-3x fa-linkedin-square fa-links"></i></a>
         <a target="_blank" href="https://twitter.com/ehnertm" class="tooltip--triangle" data-tooltip="@ehnertm">
           <i class="fa fa-3x fa-twitter-square fa-links"></i></a>
@@ -91,11 +92,17 @@
   <h1 id="about" class="about-me">About Me</h1>
   <div class="about-container">
       <div class="flex-item-about section-content">
-        <p>I have always had a passion for building things. This can be seen from my hobbies and previous work experience. I enjoy taking a project from concept to finished product.</p>
-        <p>My background was in rebuilding large-frame generators for multinational power generation companies. Prior to that I was a machinist stationed aboard the USS Emory S. Land in the Navy.</p>
-        <p>Before learning web development, I was majoring in mechanical engineering at the University of Wisconsin- Milwaukee. While attending UWM I owned and operated an automotive repair business with a focus on european cars. </p>
-        <p>At Emory University, I helped the engineers and doctors in the Department of Biomedical Informatics. I was tasked with the development of several web applications used in their research. The interfaces developed are designed to annotate over different waveforms to check patient heart activity and sound. I worked across the entire stack using modern web tools, frameworks, and cloud computing.</p>
-        <p>Want to read more about me? Read some of my ramblings on <a target="_blank" href="https://medium.com/@ehnertm">My Blog</a>.</p>
+        <p>
+          <span>My first full time development job was at Emory University. There I helped the engineers and doctors in the Department of Biomedical Informatics.</span>
+          <span>I was tasked with the development of several web applications used in their research. The interfaces developed are designed to annotate over different waveforms to check patient heart activity and sound.</span>
+          <span>I worked across the entire stack using modern web tools, frameworks, and cloud computing.</span>
+          <br>
+          <span>I currently work for Code Koalas, a web agency in Kansas City. I have the opportunity to work on a variety of projects here.</span>
+          <span>This includes an Android set-top box application that streams live tv and video-on-demand built with JavaScript. That has been a exciting project to work on because of the challenges involved with seamlessly streaming live video to users.</span>
+          <span>I also work on mobile applications using tools like Ionic, Angular, and React. Additionally, the web site work is built on the Drupal core which has allowed me to interact within a CMS.</span>
+          <br>
+          <span>Want to read more about me? Read some of my ramblings on <a target="_blank" href="https://medium.com/@ehnertm">My Blog</a>.</span>
+        </p>
       </div>
     <!-- Github User Activity Widget-->
     <div class="flex-item-about github-user"></div>
@@ -104,39 +111,98 @@
 <!-- END About Me Section -->
 
 <!-- My Skills Section -->
-<div class="cd-scrolling-bg cd-color-2">
+<div class="cd-scrolling-bg cd-color-2 skill-shapes-container">
+
+
   <h1 id="skills" class="my-skills">My Skills</h1>
-  <div class="flex-container-skills">
-    <div class="flex-item-skills-category ">
-      <div class="skills-img-container flex-skills-icons">
-        <img src="../app/images/html5.png" alt="html5 logo" class="img-skill js-img-skill js-imgleft imgnone">
-        <img src="../app/images/js.png" alt="JavaScript logo" class="img-skill js-img-skill js-imgleft imgnone">
-        <img src="../app/images/jquery.png" alt="jQuery logo" class="img-skill js-img-skill js-imgleft imgnone">
+  <div class="new-skills">
+    <div class="new-skills-container new-skills-container-js">
+      <div class="new-skill-item new-skill-item-js" data-skill="react">
+        <img src="../app/images/react.svg" alt="reactjs logo" class="">
+        <div class="m-skill-desc">
+          <span>
+            React combined with Redux is something I began developing on last year and find it very fulfilling.
+          </span>
+          <span>
+            Although I have only built personal applications using this stack I throughly enjoy working within this context and in a functional programming paradigm.
+          </span>
+        </div>
       </div>
-      <p class="skills-p">
-        I am knowledgable of HTML5 and CSS3 best practices. I am very experienced writing JavaScript as-well-as using libraries such as jQuery and lodash. This can be seen in all of my featured applications below.
-      </p>
+      <div class="new-skill-item new-skill-item-js" data-skill="backbone">
+        <img src="../app/images/backbone-icon.svg" alt="backbonejs logo" class="backbone-logo">
+        <div class="m-skill-desc">
+          <span>
+            I have experience developing a large tv streaming service application built on Backbone and Marionette.
+          </span>
+          <span>
+            I am responsible for not only maintaining the current application but also continuing to develop new features.
+          </span>
+        </div>
+      </div>
+      <div class="new-skill-item new-skill-item-js" data-skill="angular">
+        <img src="../app/images/angular-icon.svg" alt="angularjs logo" class="">
+        <div class="m-skill-desc">
+          <span>
+            I have built many web applications of my own using Angular 1.X including some featured on here.
+          </span>
+          <span>
+            Also experienced building mobile Angular applications professionally utilizing the ionic platform which are currenlty available in app stores.
+          </span>
+        </div>
+      </div>
+      <div class="skill-desc skill-desc-1">
+        <span></span>
+      </div>
     </div>
-    <div class="flex-item-skills-category">
-      <div class="skills-img-container flex-skills-icons">
-        <img src="../app/images/angular.png" alt="Angular logo" class="img-skill js-img-skill js-imgcenter imgnone">
-        <img src="../app/images/backbone.png" alt="Backbone logo" class="img-skill js-img-skill js-imgcenter imgnone">
-        <img src="../app/images/react.png" alt="React logo" class="img-skill js-img-skill js-imgcenter imgnone">
+    <div class="new-skills-container new-skills-container-js">
+      <div class="new-skill-item new-skill-item-js" data-skill="webpack">
+        <img src="../app/images/webpack.svg" alt="webpack logo" class="">
+        <div class="m-skill-desc">
+          <span>
+            All of the applications I build using React are built using the latest ES6/ES7 features as well as Webpack.
+          </span>
+          <span>
+            I replaced Gulp with Webpack as the build tool for this site which I found much more challenging since I do not use a front end framework.
+          </span>
+        </div>
       </div>
-      <p class="skills-p">
-        I have experience using serveral front end MVC frameworks in small and large applications. I am currently experimenting with the React/Flux framework.
-      </p>
-    </div>
-    <div class="flex-item-skills-category">
-      <div class="skills-img-container flex-skills-icons">
-        <img src="../app/images/Laravel.png" alt="Laravel logo" class="img-skill js-img-skill js-imgright imgnone">
-        <img src="../app/images/sqlite.png" alt="sqlite logo" class="img-skill js-img-skill js-imgright imgnone">
+      <div class="new-skill-item new-skill-item-js" data-skill="node">
+        <img src="../app/images/nodejs-icon.svg" alt="nodejs logo" class="node-logo">
+        <div class="m-skill-desc">
+          <span>
+            On the server side I enjoy writing nodejs and have built APIs using node with express and hapi.
+          </span>
+          <span>
+            I also have experience writing scripts with node and communicating with third party APIs.
+          </span>
+        </div>
       </div>
-      <p class="skills-p">
-        Having built several interfaces utilizing Laravel I am experienced working in this environment. Using it with SQLite and deploying on AWS. I use Laravel heavily with JavaScript on the client side.
-      </p>
+      <div class="new-skill-item new-skill-item-js " data-skill="css">
+        <div class="chevron-container">
+          <div class="chevron"></div>
+        </div>
+        <p class="m-skill-desc">
+          <span>
+            Writing clean css and markup is something I take pride in as css files in large projects tend to turn into messes.
+          </span>
+          <span>
+             I enjoy trying new techniques using transforms and animations to get interesting effects.
+          </span>
+          <span>
+            In fact, the css logo you see here, I made using pure css selectors on a single element.
+          </span>
+        </p>
+      </div>
+      <div class="skill-desc skill-desc-2">
+        <span></span>
+      </div>
     </div>
   </div>
+  <div class="skill-shape-1"></div>
+  <div class="skill-shape-2"></div>
+  <div class="skill-shape-3"></div>
+  <div class="skill-shape-4"></div>
+  <div class="skill-shape-5"></div>
 </div>
 <!-- END My Skills Section -->
 
@@ -145,7 +211,9 @@
   <h1 id="work" class="my-work">My Work</h1>
   <div class="flex-container-work">
     <div class="flex-item-work">
-      <div class="img-container"><img src="../app/images/transactionapp750x420px.png" alt="payment transaction" class="img-responsive"></div>
+      <div class="img-container">
+        <img src="../app/images/transactionapp750x420px.png" alt="payment transaction" class="img-responsive">
+      </div>
       <div class="work-description">
         <h2>Transaction Processor</h2>
         <p>Perform mock payment transactions and view payment history. <br>
@@ -159,7 +227,9 @@
       </div>
     </div>
     <div class="flex-item-work">
-     <div class="img-container"><img src="../app/images/wordcloud750x420px.png" alt="word cloud" class="img-responsive"></div>
+     <div class="img-container">
+       <img src="../app/images/wordcloud750x420px.png" alt="word cloud" class="img-responsive">
+     </div>
      <div class="work-description">
         <h2>Word Cloud</h2>
         <p>Sorting algorithm pulls out the most frequent words from a text input. <br>
@@ -172,7 +242,9 @@
       </div>
     </div>
     <div class="flex-item-work">
-      <div class="img-container"><img src="../app/images/mechfinder750x420px.png" alt="mechanic finder" class="img-responsive"></div>
+      <div class="img-container">
+        <img src="../app/images/mechfinder750x420px.png" alt="mechanic finder" class="img-responsive">
+      </div>
       <div class="work-description">
         <h2>Mechanic Finder</h2>
         <p>Service app to connect people with independent mechanics. <br>
@@ -185,7 +257,9 @@
       </div>
     </div>
     <div class="flex-item-work">
-      <div class="img-container"><img src="../app/images/portfolio750x420px.png" alt="portfolio" class="img-responsive"></div>
+      <div class="img-container">
+        <img src="../app/images/portfolio750x420px.png" alt="portfolio" class="img-responsive">
+      </div>
       <div class="work-description">
         <h2>My Portfolio</h2>
         <p>It is a little odd to include the portfolio within the portfolio, but it's a great example of my UI abilities. <br>
@@ -195,12 +269,15 @@
       </div>
     </div>
     <div class="flex-item-work">
-      <div class="img-container"><img src="../app/images/code750x420px.png" alt="code screenshot" class="img-responsive"></div>
+      <div class="img-container">
+        <img src="../app/images/code750x420px.png" alt="code screenshot" class="img-responsive">
+      </div>
       <div class="work-description">
         <h2>Want to See More?</h2>
         <p>These are just a few of the projects I have built.<br>
            Within my GitHub repos you'll find things like algorithm problem sets in ES6, Angular.js, React.js, Laravel, testing tools (karma, Jasmine, Mocha), task runners (Gulp is preferred but webpack has a bright future), and many more things.</p>
         <a target="_blank" href="https://github.com/maxehnert?tab=repositories" class="info">GitHub Repos</a>
+        <a target="_blank" href="http://codepen.io/maxe/pens/public/"class="info">CodePen</a>
       </div>
     </div>
   </div>
@@ -239,7 +316,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.js"></script>
 
     <script src="build/vendors.bundle.js"></script>
     <script src="build/app.bundle.js"></script>

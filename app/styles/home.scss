@@ -1,0 +1,102 @@
+/* Home Section */
+
+/* Underlines my name */
+h2 span {
+  border-bottom: 2px solid white;
+}
+
+.container {
+  position: relative;
+}
+
+.fa-links {
+  color: black;
+  font-size: 2.5em;
+}
+
+.fa-links:hover {
+  color: HSLA(200, 69%, 54%, 1);
+}
+
+.fa-file-text-o {
+  font-size: 2.3em;
+  vertical-align: top;
+}
+
+.home-adjustment-container {
+  padding-right: 10%;
+  padding-top: 10%;
+}
+
+.flex-container-home {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-h2-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flex-item-home {
+  align-self: auto;
+}
+
+.my-name-home {
+  border-bottom: 2px solid white;
+}
+
+.looper {
+  width: 100%;
+  text-align: right;
+}
+
+.looper-content {
+  font-size: 21px;
+  font-weight: 200;
+}
+
+.item.animated p {
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .looper {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+
+  // Home Content Adjustments
+  .flex-mobile-container-home {
+    display: flex;
+    align-items: center;
+  }
+
+  .home-adjustment-container {
+    padding: inherit;
+    margin: auto;
+  }
+
+  .flex-container-home {
+    align-items: center;
+  }
+
+  .flex-h2-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flex-h2-container h2 {
+    margin-top: 0;
+  }
+
+  .looper {
+    text-align: center;
+  }
+
+}
