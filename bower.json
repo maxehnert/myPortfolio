@@ -1,7 +1,0 @@
-{
-  "name": "myportfolio",
-  "private": true,
-  "dependencies": {
-    "looper": "~1.1.6"
-  }
-}
